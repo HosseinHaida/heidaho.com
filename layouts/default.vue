@@ -1,8 +1,9 @@
 <template>
-  <div class="bg-red_dark w-full min-h-screen p-4 z-0">
-    <div class="bg-paper fixed rounded-2xl fixed-w overflow-auto h-full z-1">
+  <div class="bg-red_d w-full min-h-screen p-4">
+    <div class="w-full bg-red_d fixed top-0 z-30 h-4" />
+    <div class="bg-paper rounded-2xl fixed-w z-10 h-full">
       <div
-        class="fixed w-full h-full rounded-2xl fixed-w"
+        class="fixed w-full h-full rounded-2xl fixed-w z-40"
         :class="showMenu ? 'overlay-to-black' : 'overlay-to-transparent'"
       />
 
@@ -29,38 +30,32 @@ const showMenu = ref(false)
 
 <style scoped>
 .overlay-to-black {
-  background-color: transparent;
+  @apply bg-transparent block;
   animation: fadeToBlack 0.2s;
   animation-fill-mode: forwards;
-  display: block;
 }
 
 .overlay-to-transparent {
-  @apply bg-black opacity-50;
+  @apply bg-black opacity-50 hidden;
   animation: fadeToTransparent 0.2s;
   animation-fill-mode: forwards;
-  display: none;
 }
 
 @keyframes fadeToBlack {
   from {
-    background-color: transparent;
-    display: none;
+    @apply bg-transparent hidden;
   }
   to {
-    @apply bg-black opacity-70;
-    display: block;
+    @apply bg-black opacity-70 block;
   }
 }
 
 @keyframes fadeToTransparent {
   from {
-    @apply bg-black opacity-70;
-    display: block;
+    @apply bg-black opacity-70 block;
   }
   to {
-    background-color: transparent;
-    display: none;
+    @apply bg-transparent hidden;
   }
 }
 </style>

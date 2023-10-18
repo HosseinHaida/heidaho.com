@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full z-6">
+  <div class="w-full h-full z-50">
     <div class="flex h-full lg:ml-[8vw] menu-container">
       <div ref="mainSectionMenu" class="bg-paper flex-1 main-section-menu">
         <div class="border-b-grey flex w-full border-b border-solid px-4 py-2">
@@ -28,7 +28,7 @@
             </div>
             <div class="flex">
               <div class="menu-link-number">3</div>
-              <NuxtLink class="menu-link" to="/">PROJECTS</NuxtLink>
+              <NuxtLink class="menu-link" to="/">PETIT</NuxtLink>
             </div>
             <div class="flex">
               <div class="menu-link-number">4</div>
@@ -38,7 +38,7 @@
         </div>
       </div>
       <div
-        class="bg-red_dark flex-1 max-w-sm p-6 secondary-section-menu"
+        class="bg-red_d flex-1 max-w-sm py-4 pl-4 pr-8 secondary-section-menu hidden sm:block"
         ref="secondarySectionMenu"
       >
         <div class="box w-full">
@@ -48,7 +48,7 @@
 
         <div class="box w-full mt-4">
           <div class="box-heading">Recent Playlist</div>
-          <div class="box-body">End of November / 2023</div>
+          <div class="box-body">Playlist</div>
         </div>
       </div>
     </div>
@@ -104,13 +104,9 @@ const emit = defineEmits(["hideMenu"])
 }
 
 .menu-link {
-  font-family: BigShouldersStencilDisplay;
-  font-weight: 900;
-  font-size: 12vw;
-  line-height: 1;
   animation: fadeToRedDark 0.3s;
   animation-fill-mode: forwards;
-  @apply text-red_dark;
+  @apply text-red_d font-[BigShoulders] font-black text-[12vw] leading-none;
 }
 
 .menu-link:hover {
@@ -119,7 +115,6 @@ const emit = defineEmits(["hideMenu"])
 }
 
 .menu-link-number {
-  font-family: BigShouldersStencilDisplay;
-  @apply border border-grey text-red_secondary rounded-full h-max px-2 py-1 text-xs;
+  @apply border-grey text-red_2 border font-[BigShoulders] rounded-full h-max px-2 py-1 text-xs;
 }
 </style>

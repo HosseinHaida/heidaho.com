@@ -1,7 +1,9 @@
-/* @import "~/assets/fonts/Caveat/Caveat-VariableFont_wght.ttf"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
-  font-family: "BigShouldersStencilDisplay";
+  font-family: "BigShoulders";
   src: url("../assets/fonts/BigShouldersStencilDisplay-VariableFont_wght.ttf")
     format("truetype");
 }
@@ -112,24 +114,24 @@
 
 @keyframes fadeToRedSecondary {
   from {
-    @apply text-red_dark;
+    @apply text-red_d;
   }
   to {
-    @apply text-red_secondary;
+    @apply text-red_2;
   }
 }
 
 @keyframes fadeToRedDark {
   from {
-    @apply text-red_secondary;
+    @apply text-red_2;
   }
   to {
-    @apply text-red_dark;
+    @apply text-red_d;
   }
 }
 
 body {
-  overflow-x: hidden;
+  @apply bg-red_d overflow-x-hidden overscroll-none;
 }
 
 * {
@@ -148,11 +150,19 @@ body {
 }
 
 .box {
-  @apply bg-red_secondary rounded-md;
+  @apply bg-red_2 rounded-md;
 }
 .box-heading {
-  @apply text-red_light border-red_dark text-xs px-4 py-2 border-b;
+  @apply text-red_lght border-red_d text-xs px-4 py-2 border-b;
 }
 .box-body {
   @apply text-white flex justify-center items-center text-xs p-4;
+}
+
+.text-body {
+  @apply leading-tight font-thin text-xl md:text-[2vw] lg:text-[1.7vw] xl:text-[1.6vw];
+}
+
+.text-head {
+  @apply leading-tight text-xl sm:text-[2.8vw] md:text-[2.5vw];
 }

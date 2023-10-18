@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div ref="pointerBall" id="ball" class="bg-white opacity-50 z-9" />
+    <div ref="pointerBall" id="ball" class="bg-white opacity-40 z-50" />
   </div>
 </template>
 
@@ -35,8 +35,8 @@ onMounted(() => {
 
 <style scoped>
 #ball {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   position: fixed;
   top: 0;
   left: 0;

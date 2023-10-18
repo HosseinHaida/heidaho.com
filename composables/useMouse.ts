@@ -1,10 +1,10 @@
-type HasPageCoor = { pageX: number; pageY: number }
+type HasPageCoor = { x: number; y: number }
 export const useMouse = () => {
   const mouse = ref({ x: 0, y: 0 })
 
   const update = (event: HasPageCoor) => {
-    mouse.value.x = event.pageX
-    mouse.value.y = event.pageY
+    mouse.value.x = event.x
+    mouse.value.y = event.y
   }
 
   onMounted(() => window.addEventListener("mousemove", update))

@@ -1,6 +1,9 @@
 <template>
-  <div class="flex w-full rounded-2xl justify-end p-4">
-    <div class="flex items-center">
+  <div class="flex flex-col w-full justify-end">
+    <div class="bg-red_d w-full absolute top-0 z-0 h-4" />
+    <div class="bg-paper w-full rounded-tl-2xl rounded-tr-2xl z-10 h-5" />
+
+    <div class="self-end mr-5 flex items-center">
       <button
         ref="menuBtn"
         class="bg-white rounded-full p-2 flex justify-center items-center btn-menu"
@@ -14,7 +17,7 @@
       </button>
 
       <div
-        class="bg-red rounded-full flex justify-center items-center btn-entity"
+        class="bg-red rounded-full flex justify-center items-center absolute invisible w-0 h-0 pointer-events-none z-30 btn-entity"
       >
         <Icon
           name="material-symbols:menu"
@@ -77,15 +80,7 @@ defineEmits(["showMenu"])
 </script>
 
 <style scoped>
-.btn-menu {
+/* .btn-menu {
   z-index: 1;
-}
-.btn-entity {
-  position: absolute;
-  visibility: hidden;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-  z-index: 10;
-}
+} */
 </style>
