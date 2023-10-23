@@ -1,9 +1,9 @@
 <template>
   <div class="flex flex-col w-full justify-end">
-    <div class="bg-red_d w-full absolute top-0 z-0 h-4" />
-    <div class="bg-paper w-full rounded-tl-2xl rounded-tr-2xl z-10 h-5" />
+    <div class="w-max absolute top-0 h-4 px-0 fixed-corner-left" />
+    <div class="w-max absolute top-0 h-4 px-0 right-0 fixed-corner-right" />
 
-    <div class="self-end mr-5 flex items-center">
+    <div class="self-end mt-4 mr-5 flex items-center">
       <button
         ref="menuBtn"
         class="bg-white rounded-full p-2 flex justify-center items-center btn-menu"
@@ -80,7 +80,21 @@ defineEmits(["showMenu"])
 </script>
 
 <style scoped>
-/* .btn-menu {
-  z-index: 1;
-} */
+.fixed-corner-left::before {
+  content: " ";
+  @apply bg-red_d block w-[1rem] h-full;
+}
+.fixed-corner-left::after {
+  content: " ";
+  @apply bg-paper border-paper border-t-4 border-l-[10px] border-solid rounded-tl-2xl w-[1rem] h-full block absolute top-0;
+}
+
+.fixed-corner-right::before {
+  content: " ";
+  @apply bg-red_d block w-[1rem] h-full;
+}
+.fixed-corner-right::after {
+  content: " ";
+  @apply bg-paper border-paper border-t-4 border-r-[10px] border-solid rounded-tr-2xl w-[1rem] h-full block absolute top-0;
+}
 </style>

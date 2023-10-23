@@ -1,0 +1,254 @@
+<template>
+  <section ref="rootContainer">
+    <div
+      class="w-[90vw] sm:w-[95vw] h-[100vh] rounded-2xl mx-auto"
+      ref="danaxaDescSec"
+    >
+      <div
+        class="flex h-full px-14 items-center justify-center overflow-hidden"
+      >
+        <div class="w-full h-[90vh] flex flex-col md:flex-row gap-4">
+          <div class="flex flex-col">
+            <video
+              autoplay
+              loop
+              controls
+              class="rounded-2xl h-[70vh]"
+              ref="dlabelVid"
+            >
+              <source autoplay :src="dlabelVidMP4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="text-red w-full flex mt-6">
+              <NuxtLink to="https://dlabel.org" class="flex items-center">
+                <span class="text-lg mr-2">OPEN</span>
+                <Icon
+                  name="mdi:arrow-top-right-thin-circle-outline"
+                  class="text-red"
+                  size="1.5rem"
+                />
+              </NuxtLink>
+            </div>
+          </div>
+
+          <div
+            class="bg-paper h-max flex flex-1 flex-col gap-4"
+            ref="danaxaDesc"
+          >
+            <div
+              class="bg-paper_lt rounded-2xl p-4 flex flex-col justify-between h-[70vh]"
+            >
+              <NuxtLink to="https://danaxa.com">
+                <img :src="danaXaLogo" class="w-24" alt="danaXa Logo" />
+              </NuxtLink>
+
+              <div class="text-red text-head font-semibold">
+                Frontend Developer
+                <div class="text-lg font-normal">
+                  Aug 2020 - Jul 2023 | Canberra, Australia
+                </div>
+              </div>
+            </div>
+            <div
+              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
+            >
+              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
+              <div class="pr-4">
+                Development of multiple AI-powered computer vision tools,
+                including an image/video annotation engine.
+              </div>
+            </div>
+            <div
+              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
+            >
+              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
+              <div class="pr-4">
+                Design and implementation of the tools mainly using Vue.js,
+                Konva.js and GSAP for animations.
+              </div>
+            </div>
+            <div
+              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
+            >
+              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
+              <div class="pr-4">
+                Application performance improvements in topics such as
+                filtering, list virtualizations, drag-and-drop,...
+              </div>
+            </div>
+            <div
+              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
+            >
+              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
+              <div class="pr-4">
+                Building landing pages and a blog using Nuxt.js and SASS.
+              </div>
+            </div>
+            <div
+              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
+            >
+              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
+              <div class="pr-4">
+                Using web sockets between frontend and Flask backend for
+                real-time messaging and QA system.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="w-[90vw] sm:w-[95vw] h-[100vh] rounded-2xl mx-auto"
+      ref="netaaDescSec"
+    >
+      <div
+        class="flex h-full px-14 items-center justify-center overflow-hidden"
+      >
+        <div class="w-full h-[90vh] flex flex-col md:flex-row gap-4">
+          <div class="flex flex-col">
+            <img
+              class="rounded-2xl bg-white p-2 w-full md:w-auto h-auto md:h-[59vh]"
+              :src="netaaCollage"
+            />
+            <div class="text-red w-full flex mt-6">
+              <NuxtLink
+                to="https://samanesalamat.com"
+                class="flex items-center"
+              >
+                <span class="text-lg mr-2">OPEN</span>
+                <Icon
+                  name="mdi:arrow-top-right-thin-circle-outline"
+                  class="text-red"
+                  size="1.5rem"
+                />
+              </NuxtLink>
+            </div>
+          </div>
+
+          <div
+            class="bg-paper h-max flex flex-1 flex-col gap-4"
+            ref="netaaDesc"
+          >
+            <div
+              class="bg-paper_lt rounded-2xl p-4 flex flex-col justify-between h-[58vh]"
+            >
+              <NuxtLink to="https://netaa.ir/">
+                <img :src="netaaLogo" class="w-32" alt="netaa Logo" />
+              </NuxtLink>
+
+              <div class="text-red text-head font-semibold">
+                Fullstack Developer
+                <div class="text-lg font-normal">
+                  Sep 2017 - Jul 2020 | Esfahan, Iran
+                </div>
+              </div>
+            </div>
+            <div
+              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
+            >
+              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
+              <div class="pr-4">
+                Development of a comprehensive “Occupational Safety and Health”
+                SaaS Vue.js web app.
+              </div>
+            </div>
+            <div
+              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
+            >
+              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
+              <div class="pr-4">
+                Implementation of an HR-Automation system web app using Node.js
+                and Vue.js (Quasar Framework) and MSSQL Server.
+              </div>
+            </div>
+            <div
+              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
+            >
+              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
+              <div class="pr-4">Design and creation of landing pages.</div>
+            </div>
+            <div
+              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
+            >
+              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
+              <div class="pr-4">Refactoring old and legacy codebase.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script lang="ts" setup>
+import gsap from "gsap"
+import dlabelVidMP4 from "~/assets/dlabel/dlabel-vid.mp4"
+import danaXaLogo from "~/assets/dlabel/danaxa.png"
+
+import netaaCollage from "~/assets/healthyline-collage.jpg"
+import netaaLogo from "~/assets/netaa.png"
+
+const dlabelVid = ref<HTMLVideoElement>()
+
+let ctxEx: ReturnType<typeof gsap.context>
+
+const rootContainer = ref<HTMLElement>()
+const danaxaDescSec = ref<HTMLElement>()
+const danaxaDesc = ref<HTMLElement>()
+const netaaDescSec = ref<HTMLElement>()
+const netaaDesc = ref<HTMLElement>()
+
+const positionDescTW = (scrollAmount: number, trigger: HTMLElement) => {
+  return {
+    y: scrollAmount,
+    duration: 1,
+    ease: "none",
+    scrollTrigger: {
+      trigger,
+      start: "top 5%",
+      end: `+=${scrollAmount * -1}`,
+      pin: true,
+      scrub: 1,
+      immediateRender: false,
+    },
+  }
+}
+
+onMounted(() => {
+  ctxEx = gsap.context(() => {
+    danaxaDescSec.value = danaxaDescSec.value as HTMLElement
+    danaxaDesc.value = danaxaDesc.value as HTMLElement
+    netaaDescSec.value = netaaDescSec.value as HTMLElement
+    netaaDesc.value = netaaDesc.value as HTMLElement
+
+    // danaXa desc tween
+    let danaxaDescScrollSize = -(
+      danaxaDesc.value?.scrollHeight +
+      0.5 * window.innerHeight -
+      window.innerHeight
+    )
+    gsap.to(
+      danaxaDesc.value,
+      positionDescTW(danaxaDescScrollSize, danaxaDescSec.value)
+    )
+
+    // netaa desc tween
+    let netaaDescScrollSize = -(
+      netaaDesc.value?.scrollHeight +
+      0.5 * window.innerHeight -
+      window.innerHeight
+    )
+    gsap.to(
+      netaaDesc.value,
+      positionDescTW(netaaDescScrollSize, netaaDescSec.value)
+    )
+  }, rootContainer.value) // <- Scope!
+})
+
+onUnmounted(() => {
+  ctxEx.revert()
+})
+</script>
+
+<style></style>

@@ -1,13 +1,13 @@
 <template>
   <div class="bg-red_d w-full min-h-screen p-4">
-    <div class="w-full bg-red_d fixed top-0 z-30 h-4" />
+    <div class="bg-red_d w-full fixed top-0 z-30 h-4" />
     <div class="bg-paper rounded-2xl fixed-w z-10 h-full">
       <div
         class="fixed w-full h-full rounded-2xl fixed-w z-40"
         :class="showMenu ? 'overlay-to-black' : 'overlay-to-transparent'"
       />
 
-      <div class="fixed w-full fixed-w">
+      <div class="fixed w-full fixed-w z-30">
         <mainHeader @showMenu="showMenu = true" />
       </div>
 
