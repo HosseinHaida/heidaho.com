@@ -166,3 +166,7 @@ body {
 .text-head {
   @apply leading-tight text-xl sm:text-[2.8vw] md:text-[2.5vw];
 }
+
+.section-heading div {
+  @apply font-[BigShoulders] text-[10vw] sm:text-[6vw] leading-none font-extrabold;
+}

@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-full z-50">
     <div class="flex h-full lg:ml-[8vw] menu-container">
-      <div ref="mainSectionMenu" class="bg-paper flex-1 main-section-menu">
+      <div ref="mainSecMenu" class="bg-paper flex-1 main-section-menu">
         <div class="border-b-grey flex w-full border-b border-solid px-4 py-2">
           <button
             ref="menuBtn"
@@ -24,22 +24,22 @@
             </div>
             <div class="flex">
               <div class="menu-link-number">2</div>
-              <NuxtLink class="menu-link" to="/">ABOUT</NuxtLink>
+              <NuxtLink class="menu-link" to="/about">ABOUT</NuxtLink>
             </div>
             <div class="flex">
               <div class="menu-link-number">3</div>
-              <NuxtLink class="menu-link" to="/">PETIT</NuxtLink>
+              <NuxtLink class="menu-link" to="/petit">PETIT</NuxtLink>
             </div>
             <div class="flex">
               <div class="menu-link-number">4</div>
-              <NuxtLink class="menu-link" to="/">CONTACT</NuxtLink>
+              <NuxtLink class="menu-link" to="/contact">CONTACT</NuxtLink>
             </div>
           </div>
         </div>
       </div>
       <div
         class="bg-red_d flex-1 max-w-sm py-4 pl-4 pr-8 secondary-section-menu hidden sm:block"
-        ref="secondarySectionMenu"
+        ref="secondarySeMenu"
       >
         <div class="box w-full">
           <div class="box-heading">Availability</div>
@@ -57,31 +57,39 @@
 
 <script lang="ts" setup>
 import gsap from "gsap"
-
-const mainSectionMenu = ref<HTMLElement>()
-const secondarySectionMenu = ref<HTMLElement>()
+const route = useRoute()
+const mainSecMenu = ref<HTMLElement>()
+const secondarySeMenu = ref<HTMLElement>()
 
 onMounted(() => {
   let tl = gsap.timeline()
-  if (!mainSectionMenu.value || !secondarySectionMenu.value) return
-  tl.to(secondarySectionMenu.value, { x: "0", duration: 0.2 })
-  tl.to(mainSectionMenu.value, { x: "0", duration: 0.3 }, "-=0.2")
+  let ease = "power2.out"
+  if (!mainSecMenu.value || !secondarySeMenu.value) return
+  tl.to(secondarySeMenu.value, { x: "0", duration: 0.3, ease })
+  tl.to(mainSecMenu.value, { x: "0", duration: 0.4, ease }, "-=0.3")
 })
 
 const hideMenu = () => {
   let tl = gsap.timeline()
-  if (!mainSectionMenu.value || !secondarySectionMenu.value) return
-  tl.to(mainSectionMenu.value, {
+  let ease = "power2.out"
+  if (!mainSecMenu.value || !secondarySeMenu.value) return
+  tl.to(mainSecMenu.value, {
     x: "200%",
-    duration: 0.3,
-    onComplete: () => {
-      emit("hideMenu")
-    },
+    duration: 0.4,
+    ease,
+    onComplete: () => emit("hideMenu"),
   })
-  tl.to(secondarySectionMenu.value, { x: "100%", duration: 0.2 }, "-=0.3")
+  tl.to(secondarySeMenu.value, { x: "100%", duration: 0.3, ease }, "-=0.4")
 }
 
 const emit = defineEmits(["hideMenu"])
+
+watch(
+  () => route.fullPath,
+  () => {
+    hideMenu()
+  }
+)
 </script>
 
 <style scoped>
@@ -104,16 +112,18 @@ const emit = defineEmits(["hideMenu"])
 }
 
 .menu-link {
-  animation: fadeToRedDark 0.3s;
+  animation: fadeToRedDark 0.4s;
   animation-fill-mode: forwards;
   @apply text-red_d font-[BigShoulders] font-black text-[12vw] leading-none;
 }
 
 .menu-link:hover {
-  animation: fadeToRedSecondary 0.3s;
+  animation: fadeToRedSecondary 0.4s;
   animation-fill-mode: forwards;
 }
-
+.router-link-active {
+  @apply text-red !important;
+}
 .menu-link-number {
   @apply border-grey text-red_2 border font-[BigShoulders] rounded-full h-max px-2 py-1 text-xs;
 }

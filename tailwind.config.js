@@ -18,6 +18,7 @@ export default {
       red_d: "#590a05",
       red_lght: "#815251",
       red_2: "#662521",
+      orange: "#882f1b",
       paper: "#d6cfb6",
       paper_lt: "#e0dbc8",
       grey: "#c0bcaa",

@@ -1,6 +1,15 @@
 <template>
-  <div class="text-black container-fluid mt-8 py-2" ref="homePageContainer">
-    <section>
+  <div class="container-fluid mt-8 py-2" ref="homePageContainer">
+    <section class="relative">
+      <div
+        class="absolute top-[-4.5rem] bg-red z-30 w-full h-[100vh] title-overlay rounded-2xl flex items-center justify-center overflow-hidden"
+      >
+        <div
+          class="text-paper_lt font-[BigShoulders] font-black text-head welcome-text overflow-hidden invisible"
+        >
+          WELCOME
+        </div>
+      </div>
       <div class="overflow-hidden">
         <div
           ref="titleCon"
@@ -14,7 +23,7 @@
       <div class="overflow-hidden">
         <div
           ref="enthusiastCon"
-          class="text-red_d text-center mb-8 mt-8 sm:mt-2 enthusiast-for"
+          class="text-red_d text-center mb-8 mt-8 sm:mt-2"
         >
           <span class="font-extralight leading-none text-[9vw] xl:text-[11vw]">
             The Enthusiast For
@@ -87,17 +96,19 @@
           <div
             class="bg-red_d rounded-full float-left mt-[-1rem] xl:mt-0 px-6 sm:px-16 py-1 mr-3 md:mr-6"
           >
-            <span class="text-white text-xs sm:text-sm md:text-md lg:text-lg">
+            <span
+              class="text-paper_lt text-xs sm:text-sm md:text-md lg:text-lg"
+            >
               WHO AM I?
             </span>
           </div>
 
           <div class="text-red_d text-head">
-            I was born in the land of Persia but I reckon we are all connected
-            and to define geographical and scientific specifications is limiting
-            ourselves to what we know thus far. I'm a passionate Developer who
-            tries to step firmly on the path, in which time is an illusion, no
-            past no future and what happens now, creates the later.
+            I am Persian, but I reckon we are all connected, and to define
+            geographical and scientific specifications is limiting ourselves to
+            what we know thus far. I'm a passionate Developer who tries to step
+            firmly on the path, in which time is an illusion, no past no future
+            and what happens now, creates the latter.
           </div>
 
           <div
@@ -116,10 +127,6 @@
               activities and being able to share a common sense of love for
               everything and still having the power not to get attached to it's
               mundanity is what makes us the most developed creatures on earth.
-
-              <!-- <div class="flex justify-end mt-6">
-                <button class="btn">MORE ABOUT ME</button>
-              </div> -->
             </div>
           </div>
         </div>
@@ -127,22 +134,34 @@
     </section>
 
     <section
-      class="bg-paper_lt w-[90vw] sm:w-[95vw] mt-44 mb-2 rounded-2xl mx-auto py-36"
+      class="border-paper_lt border-solid border-r-4 border-l-4 w-[90vw] sm:w-[95vw] rounded-tl-2xl rounded-tr-2xl mx-auto h-64 mt-24"
       ref="photosSec"
     >
-      <div class="flex w-full h-full mb-40" ref="photosCon">
+      <div
+        class="bg-paper_lt w-full h-6 rounded-tl-xl rounded-tr-xl flex items-center px-4 gap-2 opacity-90"
+      >
+        <div class="w-2 h-2 bg-red_d rounded-sm" />
+        <div class="w-2 h-2 bg-red_d rounded-sm" />
+        <div class="w-2 h-2 bg-red_d rounded-sm" />
+      </div>
+
+      <div class="flex w-full h-full mt-20 md:mt-56" ref="photosCon">
         <div
           v-for="(photo, i) in photos"
           :key="i"
-          class="border-solid px-5 absolute left-[2vw] sm:left-[-7.5vw] single-photo invisible"
+          class="border-solid px-5 absolute left-[-20vw] sm:left-[-7.5vw] single-photo invisible"
         >
           <img
             :src="photo"
             :alt="'photo-' + i"
-            class="rounded-xl h-44 sm:h-60 shadow-2xl"
+            class="rounded-xl h-36 sm:h-60 shadow-2xl"
           />
         </div>
       </div>
+    </section>
+    <section
+      class="bg-paper_lt w-[90vw] sm:w-[95vw] mb-2 rounded-2xl pt-10 md:pt-36 pb-36 mx-auto"
+    >
       <div
         class="text-red flex flex-col justify-center items-center w-full section-heading"
       >
@@ -161,53 +180,97 @@
           Stop, listen, realise, learn, improvise, participate and to create
           something beautiful is my hobby.
         </div>
+
+        <div class="flex justify-center mt-10">
+          <nuxtBtn
+            to="/about"
+            btn-id="moreaboutme"
+            model-value="MORE ABOUT ME"
+          />
+        </div>
       </div>
     </section>
 
-    <section class="flex flex-col pb-[10vh] sm:pb-[5vh]" ref="basketballSec">
+    <section class="flex flex-col pb-[10vh] sm:pb-[5vh]" ref="cvSec">
       <div class="flex items-start w-full justify-center py-16">
-        <div
-          class="text-red_2 self-end ml-6 sm:ml-4 mb-[-100px] sm:mb-96 left-20 w-[200px] sm:w-[190px] text-sm sm:text-lg absolute"
+        <!-- <div
+          class="text-red_2 self-end ml-6 sm:ml-4 mb-[-100px] sm:mb-10 left-20 w-[200px] sm:w-[190px] text-sm sm:text-lg absolute"
         >
-          I DO SHARE A GOOD AMOUNT OF LOVE FOR BASKETBALL
+          THE BEANIE AND THE COOL ICE BREAKER ARE MY MOM'S HANDMADE :)
+        </div> -->
+        <div
+          class="z-0 c-txt text-red font-[BigShoulders] text-[17vw] sm:text-[24vw] font-black leading-tight"
+          ref="cText"
+        >
+          C
         </div>
-        <div class="z-0 basket-txt" ref="basketText">BASKET</div>
         <img
-          :src="portfolioPicSrc"
-          class="w-[30vw] sm:w-[25vw] left-20 z-10 pointer-events-none"
-          alt="Balling picture of me"
-          ref="bbalPic"
+          :src="cvPicSrc"
+          class="w-[30vw] sm:w-[40vw] left-20 z-10 pointer-events-none cv-pic"
+          alt="Official picture of me"
+          ref="cvPic"
         />
-        <div class="self-end z-20 ball-txt" ref="ballText">BALL</div>
-      </div>
-    </section>
-
-    <section
-      class="bg-paper_lt w-[90vw] sm:w-[50vw] p-4 rounded-2xl mx-6 h-44 mb-44"
-    >
-      <div class="text-red_d text-head font-extrabold">
-        "Allright, enough about the fun, let's talk business."
-      </div>
-    </section>
-
-    <!-- <section
-      class="bg-paper overflow-hidden w-full h-[100vh] flex flex-col justify-center"
-      ref="careerDescCon"
-    >
-      <div
-        class="text-red flex flex-col flex-nowrap px-20 w-max"
-        ref="careerDesc"
-      >
-        <div class="text-[15.5vw] font-[BigShoulders] font-black leading-none">
-          LET'S HAVE A LOOK AT MY CAREER SO FAR...
+        <div
+          class="self-end z-20 v-txt text-red font-[BigShoulders] text-[17vw] sm:text-[24vw] font-black leading-tight"
+          ref="vText"
+        >
+          V
         </div>
       </div>
-      <div class="h-[150px] w-[100vw] z-10 layered-steps" />
-    </section> -->
-
-    <section class="h-max flex justify-center mx-auto">
-      <experienceSection />
     </section>
+
+    <section class="bg-paper_lt w-[90vw] sm:w-[95vw] rounded-2xl mx-auto">
+      <div class="py-16 px-6 sm:px-28">
+        <div class="container-fluid">
+          <div
+            class="bg-red_d rounded-full float-left mt-[-1rem] xl:mt-0 px-6 sm:px-16 py-1 mr-3 md:mr-6"
+          >
+            <span
+              class="text-paper_lt text-xs sm:text-sm md:text-md lg:text-lg"
+            >
+              WHERE AM I?
+            </span>
+          </div>
+
+          <div class="text-red_d text-head">
+            As a computer software engineering graduate and years of experience
+            dedicated to coding and web development, I can admit I've seen
+            enough and I'd say there is always more and that really intrigues
+            me.
+          </div>
+
+          <div
+            class="text-red_d flex mt-6 md:mt-12 lg:mt-20 items-start columns-2 justify-between"
+          >
+            <div class="hidden md:flex gap-4 items-center">
+              <div class="border-grey border rounded-full px-6 py-3">
+                <span class="text-red_2 font-[BigShoulders] text-xl font-bold">
+                  2
+                </span>
+              </div>
+              <div class="text-[2vw]">Path</div>
+            </div>
+            <div class="w-full sm:w-[50vw] text-body">
+              <div>
+                There is always a better and more creative way to solve things.
+                Developing is much like hard-coding the creativity that as a
+                thought would vanish in a glimpse.
+              </div>
+
+              <div class="mt-12">
+                There is always a better and more creative way to solve things.
+                Developing is much like hard-coding the creativity that as
+                thought would vanish in a glimpse.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="h-max flex justify-center mx-auto">
+      <experienceSection />
+    </section> -->
   </div>
 </template>
 
@@ -224,10 +287,10 @@ import img5 from "~/assets/photos/IMG_7410.jpg"
 import img6 from "~/assets/photos/IMG_7975.jpg"
 
 import anonPicSrc from "~/assets/me.yellow.png"
-import portfolioPicSrc from "~/assets/me-bb1.png"
+import cvPicSrc from "~/assets/cv.png"
 
 const photos = ref([img1, img2, img3, img4, img5, img6])
-
+const { $isMobile, $isTablet } = useNuxtApp()
 // const landingLoading = ref(true)
 
 let ctx: ReturnType<typeof gsap.context>
@@ -241,15 +304,7 @@ const whoText = ref<HTMLElement>()
 const anonPic = ref<HTMLElement>()
 const amIText = ref<HTMLElement>()
 
-const basketballSec = ref<HTMLElement>()
-const basketText = ref<HTMLElement>()
-const bbalPic = ref<HTMLElement>()
-const ballText = ref<HTMLElement>()
-
 const photosSec = ref<HTMLElement>()
-
-// const careerDescCon = ref<HTMLElement>()
-// const careerDesc = ref<HTMLElement>()
 
 // anims
 const yTween = (target: HTMLElement) => {
@@ -263,33 +318,6 @@ const yTween = (target: HTMLElement) => {
     onCompleteParams: [target],
   }
 }
-const whoAmIScroll = {
-  trigger: whoAmISec.value,
-  scrub: 5,
-}
-const bbalScroll = {
-  trigger: whoAmISec.value,
-  scrub: 10,
-}
-const photosSecScrollTW = {
-  trigger: photosSec.value,
-  start: "25% top",
-}
-// const careerDescTW = (scrollAmount: number, trigger: HTMLElement) => {
-//   return {
-//     x: scrollAmount,
-//     duration: 3,
-//     ease: "none",
-//     scrollTrigger: {
-//       trigger,
-//       start: "top",
-//       end: `+=${scrollAmount * -1} bottom`,
-//       pin: true,
-//       scrub: 1,
-//     },
-//   }
-// }
-
 // end of anims
 
 useHead({
@@ -304,29 +332,36 @@ onMounted(() => {
     titleCon.value = titleCon.value as HTMLElement
     enthusiastCon.value = enthusiastCon.value as HTMLElement
     interestsCon.value = interestsCon.value as HTMLElement
+    whoAmISec.value = whoAmISec.value as HTMLElement
     whoText.value = whoText.value as HTMLElement
     amIText.value = amIText.value as HTMLElement
     anonPic.value = anonPic.value as HTMLElement
-    basketText.value = basketText.value as HTMLElement
-    ballText.value = ballText.value as HTMLElement
-    bbalPic.value = bbalPic.value as HTMLElement
+    photosSec.value = photosSec.value as HTMLElement
 
     // 1st section tween TL
     let titleTL = gsap.timeline()
-    titleTL.from(titleCon.value, yTween(titleCon.value))
+    titleTL.to(".welcome-text", { autoAlpha: 1, duration: 0.5 })
+    titleTL.to(".welcome-text", { height: 0, duration: 0.7 })
+    titleTL.fromTo(
+      ".title-overlay",
+      { height: "100vh" },
+      { height: 0, duration: 1 },
+      ">-0.1"
+    )
+    titleTL.from(titleCon.value, yTween(titleCon.value), ">-0.6")
     titleTL.from(enthusiastCon.value, yTween(enthusiastCon.value), ">-1.7")
     titleTL.from(interestsCon.value, yTween(interestsCon.value), ">-1.5")
 
     // WHO AM I Section Tween TL
-    gsap.to(whoText.value, { x: 220, y: 20, scrollTrigger: whoAmIScroll })
-    gsap.to(amIText.value, { x: -270, y: -20, scrollTrigger: whoAmIScroll })
-    gsap.to(anonPic.value, { x: -50, y: 30, scrollTrigger: whoAmIScroll })
+    let whoAmIScroll = { trigger: whoAmISec.value, scrub: 5 }
+    gsap.to(whoText.value, { x: 140, y: 20, scrollTrigger: whoAmIScroll })
+    gsap.to(amIText.value, { x: -160, y: -20, scrollTrigger: whoAmIScroll })
+    gsap.to(anonPic.value, { x: -20, y: 30, scrollTrigger: whoAmIScroll })
 
     // Photos section tween TL
     let photos = gsap.utils.toArray(".single-photo")
     let photoSecTL = gsap.timeline({
-      scrollTrigger: photosSecScrollTW,
-      paused: true,
+      scrollTrigger: { trigger: photosSec.value, start: "top 50%" },
     })
     for (const [i, photo] of photos.entries()) {
       photoSecTL.to(
@@ -340,35 +375,25 @@ onMounted(() => {
         ">-0.3"
       )
     }
-
-    // WHO AM I Section Tween TL
-    gsap.to(basketText.value, { x: 220, y: 20, scrollTrigger: bbalScroll })
-    gsap.to(ballText.value, { x: -270, y: -20, scrollTrigger: bbalScroll })
-    gsap.to(bbalPic.value, { x: -50, y: 30, scrollTrigger: bbalScroll })
-
-    // CAREER text tween
-    // careerDescCon.value = careerDescCon.value as HTMLElement
-    // careerDesc.value = careerDesc.value as HTMLElement
-    // let careerDescScrollSize = -(
-    //   careerDesc.value?.scrollWidth +
-    //   200 -
-    //   window.innerWidth
-    // )
-    // let careerDescTL = gsap.timeline()
-    // careerDescTL.to(
-    //   careerDesc.value,
-    //   careerDescTW(careerDescScrollSize, careerDescCon.value)
-    // )
   }, homePageContainer.value) // <- Scope!
 })
 
 const getPhotoPath = (index: number, photosLength: number) => {
+  const path =
+    $isMobile() || $isTablet()
+      ? [
+          { x: 0, y: 0 },
+          { x: window.innerWidth / 2 - 20, y: -40 },
+          { x: window.innerWidth - 40, y: -18 },
+        ]
+      : [
+          { x: 0, y: 0 },
+          { x: window.innerWidth / 2 - 100, y: -200 },
+          { x: window.innerWidth - 200, y: -90 },
+        ]
+
   return {
-    path: [
-      { x: 0, y: 0 },
-      { x: window.innerWidth / 2 - 100, y: -200 },
-      { x: window.innerWidth - 200, y: -90 },
-    ],
+    path,
     curviness: 2,
     autoRotate: true,
     end: (photosLength - index) * (1 / photosLength),
@@ -390,15 +415,10 @@ onUnmounted(() => {
 }
 
 .who-txt,
-.ami-txt,
-.basket-txt,
-.ball-txt {
+.ami-txt {
   @apply text-red font-[BigShoulders] text-[17vw] sm:text-[15.5vw] font-black leading-tight;
 }
 .layered-steps {
   background: url(~/assets/layered-steps.svg);
-}
-.section-heading div {
-  @apply font-[BigShoulders] text-[6vw] sm:text-[6vw] leading-none font-extrabold;
 }
 </style>

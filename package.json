@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "gsap": "^3.12.2",
+    "mobile-detect": "^1.4.5",
     "volar-service-vetur": "^0.0.14"
   }
 }

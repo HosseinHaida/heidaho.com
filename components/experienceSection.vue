@@ -4,11 +4,9 @@
       class="w-[90vw] sm:w-[95vw] h-[100vh] rounded-2xl mx-auto"
       ref="danaxaDescSec"
     >
-      <div
-        class="flex h-full px-14 items-center justify-center overflow-hidden"
-      >
+      <div class="flex h-full items-center justify-center overflow-hidden">
         <div class="w-full h-[90vh] flex flex-col md:flex-row gap-4">
-          <div class="flex flex-col">
+          <div class="flex flex-col z-0">
             <video
               autoplay
               loop
@@ -19,20 +17,17 @@
               <source autoplay :src="dlabelVidMP4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div class="text-red w-full flex mt-6">
-              <NuxtLink to="https://dlabel.org" class="flex items-center">
-                <span class="text-lg mr-2">OPEN</span>
-                <Icon
-                  name="mdi:arrow-top-right-thin-circle-outline"
-                  class="text-red"
-                  size="1.5rem"
-                />
-              </NuxtLink>
+            <div class="text-red w-full flex mt-6 px-4">
+              <nuxtBtn
+                to="https://dlabel.org"
+                btn-id="dlabelbtn"
+                model-value="GO TO APP"
+              />
             </div>
           </div>
 
           <div
-            class="bg-paper h-max flex flex-1 flex-col gap-4"
+            class="bg-paper rounded-2xl h-max flex flex-1 flex-col gap-4 z-10"
             ref="danaxaDesc"
           >
             <div
@@ -102,32 +97,24 @@
       class="w-[90vw] sm:w-[95vw] h-[100vh] rounded-2xl mx-auto"
       ref="netaaDescSec"
     >
-      <div
-        class="flex h-full px-14 items-center justify-center overflow-hidden"
-      >
+      <div class="flex h-full items-center justify-center overflow-hidden">
         <div class="w-full h-[90vh] flex flex-col md:flex-row gap-4">
-          <div class="flex flex-col">
+          <div class="flex flex-col z-0">
             <img
               class="rounded-2xl bg-white p-2 w-full md:w-auto h-auto md:h-[59vh]"
               :src="netaaCollage"
             />
-            <div class="text-red w-full flex mt-6">
-              <NuxtLink
-                to="https://samanesalamat.com"
-                class="flex items-center"
-              >
-                <span class="text-lg mr-2">OPEN</span>
-                <Icon
-                  name="mdi:arrow-top-right-thin-circle-outline"
-                  class="text-red"
-                  size="1.5rem"
-                />
-              </NuxtLink>
+            <div class="text-red w-full flex mt-6 px-4">
+              <nuxtBtn
+                to="https://samanesalamat.com/en"
+                btn-id="netaabtn"
+                model-value="GO TO APP"
+              />
             </div>
           </div>
 
           <div
-            class="bg-paper h-max flex flex-1 flex-col gap-4"
+            class="bg-paper rounded-2xl h-max flex flex-1 flex-col gap-4 z-10"
             ref="netaaDesc"
           >
             <div
@@ -191,7 +178,7 @@ import netaaLogo from "~/assets/netaa.png"
 
 const dlabelVid = ref<HTMLVideoElement>()
 
-let ctxEx: ReturnType<typeof gsap.context>
+let ctx: ReturnType<typeof gsap.context>
 
 const rootContainer = ref<HTMLElement>()
 const danaxaDescSec = ref<HTMLElement>()
@@ -206,7 +193,7 @@ const positionDescTW = (scrollAmount: number, trigger: HTMLElement) => {
     ease: "none",
     scrollTrigger: {
       trigger,
-      start: "top 5%",
+      start: "top",
       end: `+=${scrollAmount * -1}`,
       pin: true,
       scrub: 1,
@@ -216,7 +203,7 @@ const positionDescTW = (scrollAmount: number, trigger: HTMLElement) => {
 }
 
 onMounted(() => {
-  ctxEx = gsap.context(() => {
+  ctx = gsap.context(() => {
     danaxaDescSec.value = danaxaDescSec.value as HTMLElement
     danaxaDesc.value = danaxaDesc.value as HTMLElement
     netaaDescSec.value = netaaDescSec.value as HTMLElement
@@ -225,7 +212,7 @@ onMounted(() => {
     // danaXa desc tween
     let danaxaDescScrollSize = -(
       danaxaDesc.value?.scrollHeight +
-      0.5 * window.innerHeight -
+      0.3 * window.innerHeight -
       window.innerHeight
     )
     gsap.to(
@@ -247,7 +234,7 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
-  ctxEx.revert()
+  ctx.revert()
 })
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="bg-red_d w-full min-h-screen p-4">
-    <div class="bg-red_d w-full fixed top-0 z-30 h-4" />
+    <div class="bg-red_d w-full fixed left-0 top-0 z-30 h-4" />
     <div class="bg-paper rounded-2xl fixed-w z-10 h-full">
       <div
         class="fixed w-full h-full rounded-2xl fixed-w z-40"
