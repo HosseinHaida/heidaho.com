@@ -11,13 +11,12 @@ jobs:
       - name: executing ssh
         uses: fifsky/ssh-action@master
         with:
-          host: ${{ secrets.SSH_HOST }}
-          user: ${{ secrets.SSH_USERNAME }}
-          port: ${{ secrets.SSH_PORT }}
-          key: ${{ secrets.SSH_KEY }}
-
-          script: |
+          command: |
             cd apps
             git clone git@github.com:HosseinHaida/heidaho.com.git
             pnpm install
             echo 'Deployment complete'
+          host: ${{ secrets.SSH_HOST }}
+          user: ${{ secrets.SSH_USERNAME }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_KEY }}
