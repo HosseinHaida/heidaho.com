@@ -13,10 +13,13 @@ const mouse = useMouse()
 
 onMounted(() => {
   if (!pointerBall.value) return
-  gsap.set(pointerBall.value, { xPercent: -50, yPercent: -50 })
+  gsap.set(pointerBall.value, {
+    xPercent: -50,
+    yPercent: -50,
+  })
   pos.value.x = window.innerWidth / 2
   pos.value.y = window.innerHeight / 2
-  const speed = 0.4
+  const speed = 0.2
 
   const xSet = gsap.quickSetter(pointerBall.value, "x", "px")
   const ySet = gsap.quickSetter(pointerBall.value, "y", "px")

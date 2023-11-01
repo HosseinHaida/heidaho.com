@@ -2,7 +2,7 @@
   <div class="container-fluid" ref="aboutPageCon">
     <section
       ref="hafezSec"
-      class="flex flex-col pb-[10vh] items-center justify-center h-[100vh]"
+      class="flex flex-col items-center justify-center h-[100vh]"
     >
       <div
         class="w-full flex flex-col items-center justify-center overflow-hidden"
@@ -35,11 +35,11 @@
         <div class="hafez-sonnet-tran h-full">
           <div class="font-normal">This is how I'd put it in English:</div>
           <div class="my-4 md:ml-20">
-            All seek THAT, either alert and perceptive or intoxicated and
+            All seek that, either alert and perceptive or intoxicated and
             unconscious
           </div>
           <div class="md:ml-40">
-            Everywhere is home to LOVE, no matter Mosque or Synagogue (בית כנסת)
+            Everywhere is home to love, no matter Mosque or Synagogue (בית כנסת)
           </div>
         </div>
       </div>
@@ -56,34 +56,36 @@
             <span
               class="text-paper_lt text-xs md:text-sm md:text-md lg:text-lg"
             >
-              WHO AM I?
+              ABOUT ME
             </span>
           </div>
 
           <div class="text-red_d text-head">
-            I am Persian, but I reckon we are all connected, and to define
-            geographical and scientific specifications is limiting ourselves to
-            what we know thus far. I'm a passionate Developer who tries to step
-            firmly on the path, in which time is an illusion, no past no future
-            and what happens now, creates the latter.
+            My name is Hossein. I'm a passionate Frontend Web Developer from
+            Iran. I exercise daily and enjoy pausing for a moment of
+            realization.
           </div>
 
           <div
             class="text-red_d flex mt-6 md:mt-12 lg:mt-20 items-start columns-2 justify-between"
           >
             <div class="hidden md:flex gap-4 items-center">
-              <div class="border-grey border rounded-full px-6 py-3">
+              <div class="border-grey border rounded-full p-3">
                 <span class="text-red_2 font-[BigShoulders] text-xl font-bold">
-                  1
                 </span>
               </div>
-              <div class="text-[2vw]">Intro</div>
+              <div class="text-[2vw]">Ideas</div>
             </div>
             <div class="w-full sm:w-[50vw] text-body">
-              I believe the possibility to have all the different variations of
-              activities and being able to share a common sense of love for
-              everything and still having the power not to get attached to it's
-              mundanity is what makes us the most developed creatures on earth.
+              There is no limit on how different of a thought you would have at
+              a moment, and yet you choose to hold on to it for about some time.
+              I love challenges. They let you think about something creatively
+              and learn something new.
+
+              <p class="mt-10">
+                I appreciate aesthetics in any form. An unobtrusive detail with
+                potential catches my attention like nothing else.
+              </p>
             </div>
           </div>
         </div>
@@ -185,11 +187,11 @@ const yTween = (target: HTMLElement) => {
 }
 
 useHead({
-  title: "About | HosseinHeidari",
+  title: "About | HeidaHo",
   meta: [
     {
       name: "description",
-      content: "Describing how I would like to look at things.",
+      content: "About Hossein Heidari",
     },
   ],
 })

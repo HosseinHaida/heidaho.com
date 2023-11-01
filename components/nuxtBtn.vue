@@ -2,10 +2,10 @@
   <div :id="btnId">
     <NuxtLink
       :to="to"
-      class="text-red border-red border-2 rounded-full flex items-center pl-4 pr-2 py-1 z-10 overflow-hidden font-medium relative nuxt-btn"
+      class="text-red border-red h-12 border-2 rounded-full flex items-center px-6 py-1 z-10 overflow-hidden font-medium relative nuxt-btn"
       :id="btnId + '_link'"
     >
-      <span class="text-lg mr-2 z-10">
+      <span class="text-lg mr-2 z-10 pointer-events-none">
         {{ modelValue }}
       </span>
       <Icon

@@ -1,7 +1,10 @@
 <template>
   <div class="bg-red_d w-full min-h-screen p-4">
-    <div class="bg-red_d w-full fixed left-0 top-0 z-30 h-4" />
-    <div class="bg-paper rounded-2xl fixed-w z-10 h-full">
+    <div class="bg-red_d w-full fixed left-0 top-0 z-40 h-4" />
+    <div
+      class="rounded-2xl fixed-w z-10 h-full"
+      :class="bgColor === 'dark' ? 'bg-red_d' : 'bg-paper'"
+    >
       <div
         class="fixed w-full h-full rounded-2xl fixed-w z-40"
         :class="showMenu ? 'overlay-to-black' : 'overlay-to-transparent'"
@@ -17,7 +20,7 @@
         @hideMenu="showMenu = false"
       />
 
-      <div class="pt-8">
+      <div>
         <slot />
       </div>
     </div>
@@ -25,10 +28,14 @@
 </template>
 
 <script lang="ts" setup>
+const { bgColor } = useBackground()
 const showMenu = ref(false)
 </script>
 
 <style scoped>
+.fixed-w {
+  width: calc(100vw - 2rem);
+}
 .overlay-to-black {
   @apply bg-transparent block;
   animation: fadeToBlack 0.2s;

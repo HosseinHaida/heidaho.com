@@ -3,9 +3,5 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/global.css"],
   modules: ["@nuxtjs/tailwindcss", "nuxt-icon"],
-  nitro: {
-    prerender: {
-      routes: ["/"],
-    },
-  },
+  // ssr: false,
 })

@@ -1,25 +1,25 @@
 <template>
-  <section ref="rootContainer">
+  <section class="mt-10" ref="rootContainer">
     <div
-      class="w-[90vw] sm:w-[95vw] h-[100vh] rounded-2xl mx-auto"
+      class="w-[90vw] sm:w-[95vw] h-max rounded-2xl mx-auto"
       ref="danaxaDescSec"
     >
       <div class="flex h-full items-center justify-center overflow-hidden">
-        <div class="w-full h-[90vh] flex flex-col md:flex-row gap-4">
-          <div class="flex flex-col z-0">
+        <div class="w-full pb-10 flex flex-col md:flex-row gap-4">
+          <div class="flex flex-col z-0 order-2 md:order-1">
             <video
               autoplay
               loop
-              controls
-              class="rounded-2xl h-[70vh]"
+              muted
+              class="rounded-2xl md:h-[70vh]"
               ref="dlabelVid"
             >
               <source autoplay :src="dlabelVidMP4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div class="text-red w-full flex mt-6 px-4">
+            <div class="text-red w-full flex justify-end mt-6 px-4">
               <nuxtBtn
-                to="https://dlabel.org"
+                to="https://dlabel.org/annotation/tool"
                 btn-id="dlabelbtn"
                 model-value="GO TO APP"
               />
@@ -27,7 +27,7 @@
           </div>
 
           <div
-            class="bg-paper rounded-2xl h-max flex flex-1 flex-col gap-4 z-10"
+            class="bg-paper rounded-2xl h-max flex flex-1 flex-col gap-4 z-10 order-1 md:order-2"
             ref="danaxaDesc"
           >
             <div
@@ -42,9 +42,16 @@
                 <div class="text-lg font-normal">
                   Aug 2020 - Jul 2023 | Canberra, Australia
                 </div>
+
+                <div class="flex gap-1 mt-4">
+                  <div class="tech-chip">JavaScript</div>
+                  <div class="tech-chip">Vue.js</div>
+                  <div class="tech-chip">Kanva.js</div>
+                  <div class="tech-chip">Flask</div>
+                </div>
               </div>
             </div>
-            <div
+            <!-- <div
               class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
             >
               <div class="text-red w-full flex justify-end pb-6"><li></li></div>
@@ -87,24 +94,24 @@
                 Using web sockets between frontend and Flask backend for
                 real-time messaging and QA system.
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
     </div>
 
     <div
-      class="w-[90vw] sm:w-[95vw] h-[100vh] rounded-2xl mx-auto"
+      class="w-[90vw] sm:w-[95vw] h-max rounded-2xl mx-auto"
       ref="netaaDescSec"
     >
       <div class="flex h-full items-center justify-center overflow-hidden">
-        <div class="w-full h-[90vh] flex flex-col md:flex-row gap-4">
-          <div class="flex flex-col z-0">
+        <div class="w-full pb-10 flex flex-col md:flex-row gap-4">
+          <div class="flex flex-col z-0 order-2 md:order-1">
             <img
               class="rounded-2xl bg-white p-2 w-full md:w-auto h-auto md:h-[59vh]"
               :src="netaaCollage"
             />
-            <div class="text-red w-full flex mt-6 px-4">
+            <div class="text-red w-full flex justify-end mt-6 px-4">
               <nuxtBtn
                 to="https://samanesalamat.com/en"
                 btn-id="netaabtn"
@@ -114,7 +121,7 @@
           </div>
 
           <div
-            class="bg-paper rounded-2xl h-max flex flex-1 flex-col gap-4 z-10"
+            class="bg-paper rounded-2xl h-max flex flex-1 flex-col gap-4 z-10 order-1 md:order-2"
             ref="netaaDesc"
           >
             <div
@@ -129,9 +136,18 @@
                 <div class="text-lg font-normal">
                   Sep 2017 - Jul 2020 | Esfahan, Iran
                 </div>
+
+                <div class="flex gap-1 mt-4">
+                  <div class="tech-chip">JavaScript</div>
+                  <div class="tech-chip">Vue.js</div>
+                  <div class="tech-chip">Quasar</div>
+                  <div class="tech-chip">Hapi.js</div>
+                  <div class="tech-chip">Express.js</div>
+                  <div class="tech-chip">PostgreSQL</div>
+                </div>
               </div>
             </div>
-            <div
+            <!-- <div
               class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
             >
               <div class="text-red w-full flex justify-end pb-6"><li></li></div>
@@ -160,7 +176,7 @@
             >
               <div class="text-red w-full flex justify-end pb-6"><li></li></div>
               <div class="pr-4">Refactoring old and legacy codebase.</div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -170,72 +186,74 @@
 
 <script lang="ts" setup>
 import gsap from "gsap"
-import dlabelVidMP4 from "~/assets/dlabel/dlabel-vid.mp4"
-import danaXaLogo from "~/assets/dlabel/danaxa.png"
+import dlabelVidMP4 from "~/assets/dlabel-vid.mp4"
+import danaXaLogo from "~/assets/danaxa.png"
 
 import netaaCollage from "~/assets/healthyline-collage.jpg"
 import netaaLogo from "~/assets/netaa.png"
 
 const dlabelVid = ref<HTMLVideoElement>()
 
-let ctx: ReturnType<typeof gsap.context>
+// let ctx: ReturnType<typeof gsap.context>
 
-const rootContainer = ref<HTMLElement>()
-const danaxaDescSec = ref<HTMLElement>()
-const danaxaDesc = ref<HTMLElement>()
-const netaaDescSec = ref<HTMLElement>()
-const netaaDesc = ref<HTMLElement>()
+// const rootContainer = ref<HTMLElement>()
+// const danaxaDescSec = ref<HTMLElement>()
+// const danaxaDesc = ref<HTMLElement>()
+// const netaaDescSec = ref<HTMLElement>()
+// const netaaDesc = ref<HTMLElement>()
 
-const positionDescTW = (scrollAmount: number, trigger: HTMLElement) => {
-  return {
-    y: scrollAmount,
-    duration: 1,
-    ease: "none",
-    scrollTrigger: {
-      trigger,
-      start: "top",
-      end: `+=${scrollAmount * -1}`,
-      pin: true,
-      scrub: 1,
-      immediateRender: false,
-    },
-  }
-}
+// const positionDescTW = (scrollAmount: number, trigger: HTMLElement) => {
+//   return {
+//     y: scrollAmount,
+//     duration: 1,
+//     ease: "none",
+//     scrollTrigger: {
+//       trigger,
+//       start: "top",
+//       end: `+=${scrollAmount * -1}`,
+//       pin: true,
+//       scrub: 1,
+//       immediateRender: false,
+//     },
+//   }
+// }
 
 onMounted(() => {
-  ctx = gsap.context(() => {
-    danaxaDescSec.value = danaxaDescSec.value as HTMLElement
-    danaxaDesc.value = danaxaDesc.value as HTMLElement
-    netaaDescSec.value = netaaDescSec.value as HTMLElement
-    netaaDesc.value = netaaDesc.value as HTMLElement
-
-    // danaXa desc tween
-    let danaxaDescScrollSize = -(
-      danaxaDesc.value?.scrollHeight +
-      0.3 * window.innerHeight -
-      window.innerHeight
-    )
-    gsap.to(
-      danaxaDesc.value,
-      positionDescTW(danaxaDescScrollSize, danaxaDescSec.value)
-    )
-
-    // netaa desc tween
-    let netaaDescScrollSize = -(
-      netaaDesc.value?.scrollHeight +
-      0.5 * window.innerHeight -
-      window.innerHeight
-    )
-    gsap.to(
-      netaaDesc.value,
-      positionDescTW(netaaDescScrollSize, netaaDescSec.value)
-    )
-  }, rootContainer.value) // <- Scope!
+  // ctx = gsap.context(() => {
+  //   danaxaDescSec.value = danaxaDescSec.value as HTMLElement
+  //   danaxaDesc.value = danaxaDesc.value as HTMLElement
+  //   netaaDescSec.value = netaaDescSec.value as HTMLElement
+  //   netaaDesc.value = netaaDesc.value as HTMLElement
+  //   // danaXa desc tween
+  //   let danaxaDescScrollSize = -(
+  //     danaxaDesc.value?.scrollHeight +
+  //     0.3 * window.innerHeight -
+  //     window.innerHeight
+  //   )
+  //   gsap.to(
+  //     danaxaDesc.value,
+  //     positionDescTW(danaxaDescScrollSize, danaxaDescSec.value)
+  //   )
+  //   // netaa desc tween
+  //   let netaaDescScrollSize = -(
+  //     netaaDesc.value?.scrollHeight +
+  //     0.5 * window.innerHeight -
+  //     window.innerHeight
+  //   )
+  //   gsap.to(
+  //     netaaDesc.value,
+  //     positionDescTW(netaaDescScrollSize, netaaDescSec.value)
+  //   )
+  // }, rootContainer.value) // <- Scope!
 })
 
 onUnmounted(() => {
-  ctx.revert()
+  // ctx.revert()
 })
 </script>
 
-<style></style>
+<style scoped>
+.tech-chip {
+  @apply bg-paper text-red px-4 py-1 text-sm rounded-sm;
+}
+</style>

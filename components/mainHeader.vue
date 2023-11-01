@@ -1,11 +1,12 @@
 <template>
   <div class="flex w-full justify-between items-center">
-    <div class="w-max absolute top-0 h-4 px-0 left-0 fixed-corner-left" />
-    <div class="w-max absolute top-0 h-4 px-0 right-0 fixed-corner-right" />
+    <div v-if="bgColor === 'light'" class="left-0 fixed-corner-left" />
+    <div v-if="bgColor === 'light'" class="right-0 fixed-corner-right" />
 
     <NuxtLink
       to="/"
-      class="text-red font-[BigShoulders] font-extrabold text-md md:text-[1.2vw] mt-4 mx-5 px-3 rounded-full border border-red"
+      class="font-[BigShoulders] font-extrabold text-md md:text-3xl mt-4 mx-5 px-3 rounded-full"
+      :class="bgColor === 'dark' ? 'text-paper_lt' : 'text-red'"
     >
       HH
     </NuxtLink>
@@ -13,7 +14,7 @@
     <div class="mt-4 mr-5 flex items-center">
       <button
         ref="menuBtn"
-        class="bg-white rounded-full p-2 flex justify-center items-center btn-menu"
+        class="bg-white rounded-full p-2 flex justify-center items-center"
         @click="$emit('showMenu')"
       >
         <Icon
@@ -41,6 +42,8 @@ import gsap from "gsap"
 
 const mouse = useMouse()
 const menuBtn = ref<HTMLButtonElement>()
+
+const { bgColor } = useBackground()
 
 onMounted(() => {
   if (!menuBtn.value) return
@@ -87,6 +90,10 @@ defineEmits(["showMenu"])
 </script>
 
 <style scoped>
+.fixed-corner-left,
+.fixed-corner-right {
+  @apply w-max absolute top-0 h-4 px-0;
+}
 .fixed-corner-left::before,
 .fixed-corner-right::before {
   content: " ";
