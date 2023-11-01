@@ -14,6 +14,7 @@ jobs:
           command: |
             cd apps
             git clone git@github.com:HosseinHaida/heidaho.com.git
+            cd heidaho.com
             pnpm install
             echo 'Deployment complete'
           host: ${{ secrets.SSH_HOST }}
