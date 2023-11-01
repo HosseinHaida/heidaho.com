@@ -2,6 +2,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/global.css"],
+  build: { transpile: ["gsap"] },
   modules: ["@nuxtjs/tailwindcss", "nuxt-icon"],
-  // ssr: false,
 })

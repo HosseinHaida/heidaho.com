@@ -409,7 +409,6 @@ onUnmounted(() => {
 }
 .lock-hole {
   animation: fadeLockHoleToRed 1s infinite;
-  /* animation-fill-mode: both; */
   @apply rounded-full w-8 h-8 bg-red;
 }
 
