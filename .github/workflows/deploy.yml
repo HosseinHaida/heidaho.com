@@ -19,5 +19,6 @@ jobs:
             echo 'Deployment complete'
           host: ${{ secrets.SSH_HOST }}
           user: ${{ secrets.SSH_USERNAME }}
+          pass: ${{ secrets.SSH_PASS }}
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
