@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full pt-24">
+  <div class="w-full pt-24" ref="contactPageWrapr">
     <div
       class="text-paper_lt flex flex-col w-full px-6 lg:px-36 section-heading h-max"
     >
@@ -82,6 +82,10 @@
 <script lang="ts" setup>
 import meContact from "~/assets/me-contact.png"
 import gsap from "gsap"
+
+const contactPageWrapr = ref<HTMLElement>()
+let ctx: ReturnType<typeof gsap.context>
+
 onBeforeMount(() => {
   useBackground("dark")
 })
@@ -97,14 +101,17 @@ useHead({
 })
 
 onMounted(() => {
-  const tl = gsap.timeline()
-  tl.from(".contact-title", { x: -100, width: 0 })
-  tl.from(".contact-details", { y: 150 })
-  tl.from(".contact-border", { xPercent: 100 })
-  tl.from(".contact-img", { autoAlpha: 0 }, ">-0.2")
+  ctx = gsap.context(() => {
+    const tl = gsap.timeline()
+    tl.from(".contact-title", { x: -100, width: 0 })
+    tl.from(".contact-details", { y: 150 })
+    tl.from(".contact-border", { xPercent: 100 })
+    tl.from(".contact-img", { autoAlpha: 0 }, ">-0.2")
+  }, contactPageWrapr.value)
 })
 
 onUnmounted(() => {
+  ctx.revert()
   useBackground("light")
 })
 </script>
