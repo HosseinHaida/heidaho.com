@@ -1,11 +1,17 @@
 <template>
   <div class="flex w-full justify-between items-center">
-    <div v-if="bgColor === 'light'" class="left-0 fixed-corner-left" />
-    <div v-if="bgColor === 'light'" class="right-0 fixed-corner-right" />
+    <div
+      v-if="bgColor === 'light'"
+      class="left-0 hidden md:block fixed-corner-left"
+    />
+    <div
+      v-if="bgColor === 'light'"
+      class="right-0 hidden md:block fixed-corner-right"
+    />
 
     <NuxtLink
       to="/"
-      class="font-[BigShoulders] font-extrabold text-md md:text-3xl mt-4 mx-5 px-3 rounded-full"
+      class="font-[BigShoulders] font-extrabold text-2xl md:text-3xl mt-4 mx-5 px-3 rounded-full"
       :class="bgColor === 'dark' ? 'text-paper_lt' : 'text-red'"
     >
       HH

@@ -94,8 +94,8 @@
               <span>Random Cat Facts</span>
               <Icon
                 v-if="!facts"
-                name="svg-spinners:pulse-ring"
-                class="text-xl text-white opacity-20 cursor-pointer"
+                name="svg-spinners:pulse-rings-multiple"
+                class="text-xl text-white opacity-60"
               />
             </div>
             <div class="box-body h-full overflow-hidden">
@@ -276,7 +276,7 @@ watch(
 .menu-link {
   animation: fadeToRedDark 0.4s;
   animation-fill-mode: forwards;
-  @apply text-red_d font-[BigShoulders] font-black text-[12vw] leading-none;
+  @apply text-red_d font-[BigShoulders] font-black text-[11vh] md:text-[12vw] leading-none;
 }
 
 .menu-link:hover {

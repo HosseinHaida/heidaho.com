@@ -4,6 +4,10 @@
       <div
         class="absolute bg-red z-30 w-full h-[100vh] title-overlay rounded-2xl flex items-center justify-center overflow-hidden"
       >
+        <Icon
+          name="svg-spinners:pulse-rings-multiple"
+          class="text-3xl text-white absolute top-4 left-4 opacity-80"
+        />
         <div
           class="text-paper_lt font-[BigShoulders] font-black text-head welcome-text overflow-hidden invisible"
         >
@@ -79,7 +83,7 @@
     >
       <div class="flex items-start w-full justify-center py-16 relative">
         <div
-          class="text-red_2 self-end ml-6 md:ml-4 mb-[-100px] bottom-6 md:bottom-0 md:mb-10 left-20 w-[200px] sm:w-[190px] text-sm sm:text-lg absolute"
+          class="text-red_2 self-end ml-6 md:ml-4 bottom-[-6rem] md:bottom-0 md:left-20 w-[200px] sm:w-[190px] text-sm sm:text-lg absolute"
         >
           BEHIND THIS MASK THERE IS MORE THAN JUST FLESH.
           <div class="mt-4">
@@ -87,7 +91,7 @@
           </div>
         </div>
         <div class="z-0 hidden md:block who-text">WHO</div>
-        <div class="z-0 md:hidden flex flex-col ml-[-8vw] who-text">
+        <div class="z-0 md:hidden flex flex-col ml-0 who-text">
           <span>WHO</span>
           <span>AM</span>
           <span>I?</span>
@@ -321,8 +325,8 @@ onMounted(() => {
 
     // WHO AM I Section Tween TL
     let whoAmIScroll = { trigger: ".whoami-sec", scrub: 5 }
-    gsap.to(".who-text", { x: 140, y: 20, scrollTrigger: whoAmIScroll })
-    gsap.to(".ami-text", { x: -160, y: -20, scrollTrigger: whoAmIScroll })
+    gsap.to(".who-text", { x: 80, y: 20, scrollTrigger: whoAmIScroll })
+    gsap.to(".ami-text", { x: -90, y: -20, scrollTrigger: whoAmIScroll })
     gsap.to(".whoami-pic", { x: -20, y: 30, scrollTrigger: whoAmIScroll })
 
     // Photos section tween TL
