@@ -68,7 +68,7 @@
       </div>
     </div>
 
-    <div class="max-w-sm absolute bottom-0 right-0">
+    <div class="max-w-sm absolute bottom-0 right-0 hidden md:block">
       <div class="w-full h-[4px] border-paper_lt border-t-4 contact-border" />
       <img
         :src="meContact"

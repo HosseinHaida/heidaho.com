@@ -11,7 +11,7 @@
       <div class="z-0 basket-txt" ref="basketText">BASKET</div>
       <img
         :src="bballPic"
-        class="w-[30vw] sm:w-[25vw] left-20 z-10 pointer-events-none"
+        class="w-[45vw] sm:w-[25vw] left-20 z-10 pointer-events-none"
         alt="Balling picture of me"
         ref="bbalPic"
       />

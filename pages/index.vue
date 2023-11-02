@@ -33,9 +33,9 @@
         </div>
       </div>
 
-      <div class="overflow-hidden">
+      <div class="overflow-hidden pl-4 sm:pl-0">
         <div
-          class="columns-2 md:columns-4 mx-8 py-6 overflow-hidden"
+          class="columns-2 md:columns-4 px-8 py-6 overflow-hidden"
           ref="interestsWrapr"
         >
           <div class="flex flex-col items-center pb-4">
@@ -74,23 +74,31 @@
       </div>
     </section>
 
-    <section class="flex flex-col pb-[10vh] sm:pb-[5vh] whoami-sec">
-      <div class="flex items-start w-full justify-center py-16">
+    <section
+      class="flex flex-col pb-[25vh] md:pb-[10vh] sm:pb-[5vh] whoami-sec"
+    >
+      <div class="flex items-start w-full justify-center py-16 relative">
         <div
-          class="text-red_2 self-end ml-6 sm:ml-4 mb-[-100px] sm:mb-10 left-20 w-[200px] sm:w-[190px] text-sm sm:text-lg absolute"
+          class="text-red_2 self-end ml-6 md:ml-4 mb-[-100px] bottom-6 md:bottom-0 md:mb-10 left-20 w-[200px] sm:w-[190px] text-sm sm:text-lg absolute"
         >
           BEHIND THIS MASK THERE IS MORE THAN JUST FLESH.
           <div class="mt-4">
             BTW. THE BEANIE AND THE COOL ICE BREAKER ARE MY MOM'S HANDMADE :)
           </div>
         </div>
-        <div class="z-0 who-text">WHO</div>
+        <div class="z-0 hidden md:block who-text">WHO</div>
+        <div class="z-0 md:hidden flex flex-col ml-[-8vw] who-text">
+          <span>WHO</span>
+          <span>AM</span>
+          <span>I?</span>
+        </div>
+
         <img
           :src="whoAmIPicSrc"
-          class="w-[30vw] sm:w-[20vw] left-20 z-10 pointer-events-none whoami-pic"
+          class="w-[40vw] sm:w-[20vw] left-20 z-10 ml-10 sm:ml-0 pointer-events-none whoami-pic"
           alt="Anonymous picture of me"
         />
-        <div class="self-end z-20 ami-text">AM I?</div>
+        <div class="self-end z-20 hidden md:block ami-text">AM I?</div>
       </div>
     </section>
 
@@ -114,7 +122,7 @@
         </div>
       </div>
       <div
-        class="text-red flex flex-col justify-center items-center w-full pt-28 section-heading"
+        class="text-red flex flex-col justify-center items-center w-full pt-40 md:pt-[28] section-heading"
       >
         <div>LIFE</div>
         <div>UNCONDITIONAL</div>
@@ -168,14 +176,17 @@
           />
         </div>
       </div>
-      <div class="flex items-start w-full justify-center py-16">
-        <div class="z-0 car-text">CAR</div>
+      <div
+        class="flex flex-col md:flex-row items-start w-full justify-center py-16"
+      >
+        <div class="z-0 hidden md:block mr-[-17vw] car-text">CAR</div>
+        <div class="z-0 block md:hidden order-2 mx-auto car-text">CAREER</div>
         <img
           :src="careerIntroPicSrc"
-          class="w-[60vw] sm:w-[40vw] left-20 z-0 pointer-events-none career-pic"
+          class="w-[60vw] sm:w-[40vw] left-20 z-0 pointer-events-none order-1 md:order-1 mb-[-6rem] mb-none career-pic"
           alt="Official picture of me"
         />
-        <div class="self-end z-10 eer-text">EER</div>
+        <div class="self-end z-10 hidden md:block md:order-3 eer-text">EER</div>
       </div>
     </section>
 
@@ -333,14 +344,14 @@ onMounted(() => {
     }
 
     // CAREER Section Tween TL
-    let profScroll = {
+    let careerScroll = {
       trigger: ".career-sec",
       scrub: 5,
       start: "top bottom",
     }
-    gsap.to(".car-text", { x: 30, y: 20, scrollTrigger: profScroll })
-    gsap.to(".eer-text", { x: -40, y: 30, scrollTrigger: profScroll })
-    gsap.to(".career-pic", { x: 30, y: -30, scrollTrigger: profScroll })
+    gsap.to(".car-text", { x: 30, y: 20, scrollTrigger: careerScroll })
+    gsap.to(".eer-text", { x: -40, y: 30, scrollTrigger: careerScroll })
+    gsap.to(".career-pic", { x: 60, y: -30, scrollTrigger: careerScroll })
   }, homePageWrapr.value) // <- Scope!
 })
 
@@ -394,10 +405,12 @@ onUnmounted(() => {
 }
 
 .who-text,
+.who-text > span,
 .ami-text,
 .car-text,
+.car-text > span,
 .eer-text {
-  @apply text-red font-[BigShoulders] text-[17vw] sm:text-[15.5vw] font-black leading-tight;
+  @apply text-red font-[BigShoulders] text-[24vw] sm:text-[15.5vw] font-black leading-tight;
 }
 
 /* CAREER LOCK */

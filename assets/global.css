@@ -134,9 +134,12 @@ body {
   @apply bg-red_d overflow-x-hidden overscroll-none;
 }
 
+body > * {
+  @apply overflow-x-hidden;
+}
+
 * {
   font-family: K2D, Helvetica, sans-serif;
-
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
