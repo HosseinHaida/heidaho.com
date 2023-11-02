@@ -16,7 +16,7 @@ jobs:
             git pull
             pnpm install
             npx nuxi generate
-            echo 'Deployment complete'
+            echo 'Deployment Complete'
           host: ${{ secrets.SSH_HOST }}
           user: ${{ secrets.SSH_USERNAME }}
           port: ${{ secrets.SSH_PORT }}
