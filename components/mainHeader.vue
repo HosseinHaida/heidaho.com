@@ -1,13 +1,7 @@
 <template>
   <div class="flex w-full justify-between items-center">
-    <div
-      v-if="bgColor === 'light'"
-      class="left-0 hidden md:block fixed-corner-left"
-    />
-    <div
-      v-if="bgColor === 'light'"
-      class="right-0 hidden md:block fixed-corner-right"
-    />
+    <div v-if="bgColor === 'light'" class="left-0 fixed-corner-left" />
+    <div v-if="bgColor === 'light'" class="right-0 fixed-corner-right" />
 
     <NuxtLink
       to="/"

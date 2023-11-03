@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-10" ref="rootContainer">
+  <section ref="rootContainer">
     <div
       class="w-[90vw] sm:w-[95vw] h-max rounded-2xl mx-auto"
       ref="danaxaDescSec"

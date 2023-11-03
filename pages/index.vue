@@ -183,14 +183,20 @@
       <div
         class="flex flex-col md:flex-row items-start w-full justify-center py-16"
       >
-        <div class="z-0 hidden md:block mr-[-17vw] car-text">CAR</div>
-        <div class="z-0 block md:hidden order-2 mx-auto car-text">CAREER</div>
+        <div class="z-0 hidden md:block mr-[-17vw] invisible car-text">CAR</div>
+        <div class="z-0 block md:hidden order-2 mx-auto invisible car-text">
+          CAREER
+        </div>
         <img
           :src="careerIntroPicSrc"
-          class="w-[60vw] sm:w-[40vw] left-20 z-0 pointer-events-none order-1 md:order-1 mb-[-6rem] mb-none career-pic"
+          class="w-[60vw] sm:w-[40vw] left-20 z-0 pointer-events-none order-1 md:order-1 mb-[-6rem] mb-none invisible career-pic"
           alt="Official picture of me"
         />
-        <div class="self-end z-10 hidden md:block md:order-3 eer-text">EER</div>
+        <div
+          class="self-end z-10 hidden md:block md:order-3 invisible eer-text"
+        >
+          EER
+        </div>
       </div>
     </section>
 
@@ -252,7 +258,10 @@
       </div>
     </section>
 
-    <section v-if="!careerLocked" class="h-max flex justify-center mx-auto">
+    <section
+      v-if="!careerLocked"
+      class="h-max flex justify-center mx-auto mt-10 mb-28"
+    >
       <experienceSection />
     </section>
   </div>
@@ -333,7 +342,7 @@ onMounted(() => {
     let photos = <HTMLElement[]>gsap.utils.toArray(".single-photo")
     let photoSecTL = gsap.timeline({
       paused: true,
-      scrollTrigger: { trigger: ".photos-sec", start: "top 70%" },
+      scrollTrigger: { trigger: ".photos-sec", start: "top 40%" },
     })
     for (const [i, photo] of photos.entries()) {
       photoSecTL.to(
@@ -386,11 +395,32 @@ const unlockCareer = () => {
   let ease = "power2.inOut"
   let duration = 1
   let tl = gsap.timeline()
+
   tl.to(".lock-head", { y: -10, ease: ease1, duration: 0.3 })
   tl.to(".lock-head", { x: "-100vw", rotate: 40, ease: ease1, duration })
   tl.to(".lock-body", { x: "100vw", rotate: -40, ease: ease1, duration }, ">-1")
   tl.to(".blind-l", { x: "-100vw", stagger: 0.05, duration, ease }, ">-0.8")
   tl.to(".blind-r", { x: "100vw", stagger: 0.05, duration, ease }, "-=1.6")
+
+  tl.fromTo(
+    ".car-text",
+    { xPercent: 50, autoAlpha: 0 },
+    { xPercent: 0, autoAlpha: 1 },
+    ">-1.1"
+  )
+  tl.fromTo(
+    ".eer-text",
+    { xPercent: -50, autoAlpha: 0 },
+    { xPercent: 0, autoAlpha: 1 },
+    ">-0.4"
+  )
+  tl.fromTo(
+    ".career-pic",
+    { xPercent: -50, yPercent: 50, autoAlpha: 0 },
+    { xPercent: 0, yPercent: 0, autoAlpha: 1 },
+    ">-0.4"
+  )
+
   careerLocked.value = false
 }
 
