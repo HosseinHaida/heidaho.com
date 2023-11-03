@@ -107,16 +107,13 @@
     </section>
 
     <section
-      class="bg-paper_lt w-[90vw] sm:w-[95vw] mb-6 rounded-2xl pb-36 mx-auto photos-sec"
+      class="w-[90vw] sm:w-[95vw] mb-6 rounded-2xl mx-auto relative overflow-hidden photos-sec"
     >
-      <div
-        class="flex w-full h-full mt-20 md:mt-56 bg-transparent"
-        ref="photosCon"
-      >
+      <div class="pt-20 md:pt-56" ref="photosCon">
         <div
           v-for="(photo, i) in photos"
           :key="i"
-          class="border-solid px-5 absolute left-[-20vw] sm:left-[-7.5vw] single-photo"
+          class="border-solid px-5 absolute left-[-26vw] sm:left-[-10vw] single-photo"
         >
           <img
             :src="photo"
@@ -125,30 +122,33 @@
           />
         </div>
       </div>
-      <div
-        class="text-red flex flex-col justify-center items-center w-full pt-40 md:pt-[28] section-heading"
-      >
-        <div>LIFE</div>
-        <div>UNCONDITIONAL</div>
-      </div>
-
-      <div
-        class="text-red_d w-full sm:w-[50vw] text-center mt-10 text-body mx-auto"
-      >
-        I love planets, specially Earth. It's breathing and giving us life. Why
-        not take a moment to appreciate and spend some quality time with her.
-
-        <div class="mt-6">
-          Stop, listen, realise, learn, improvise, participate and to create
-          something beautiful is my hobby.
+      <div class="bg-paper_lt rounded-2xl w-full pb-36 px-2">
+        <div
+          class="text-red flex flex-col justify-center items-center w-full pt-40 md:pt-[28] section-heading"
+        >
+          <div>LIFE</div>
+          <div>UNCONDITIONAL</div>
         </div>
 
-        <div class="flex justify-center mt-10">
-          <nuxtBtn
-            to="/about"
-            btn-id="moreaboutme"
-            model-value="MORE ABOUT ME"
-          />
+        <div
+          class="text-red_d w-full sm:w-[50vw] text-center mt-10 text-body mx-auto"
+        >
+          I love planets, specially Earth. It's breathing and giving us life.
+          Why not take a moment to appreciate and spend some quality time with
+          her.
+
+          <div class="mt-6">
+            Stop, listen, realise, learn, improvise, participate and to create
+            something beautiful is my hobby.
+          </div>
+
+          <div class="flex justify-center mt-10">
+            <nuxtBtn
+              to="/about"
+              btn-id="moreaboutme"
+              model-value="MORE ABOUT ME"
+            />
+          </div>
         </div>
       </div>
     </section>

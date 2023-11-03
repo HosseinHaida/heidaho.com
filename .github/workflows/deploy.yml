@@ -14,7 +14,6 @@ jobs:
           command: |
             cd apps/heidaho.com
             git pull
-            pnpm install
             npx nuxi generate
             echo 'Deployment Complete'
           host: ${{ secrets.SSH_HOST }}

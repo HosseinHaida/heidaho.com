@@ -2,7 +2,7 @@
   <div class="container-fluid" ref="aboutPageCon">
     <section
       ref="hafezSec"
-      class="flex flex-col items-center justify-center h-[100vh]"
+      class="flex flex-col items-center justify-center h-[100vh] pb-12 md:pb-0"
     >
       <div
         class="w-full flex flex-col items-center justify-center overflow-hidden"
@@ -20,7 +20,7 @@
       </div>
 
       <div
-        class="text-red_2 self-end ml-6 md:ml-4 left-20 bottom-2 md:bottom-20 w-[200px] md:w-[190px] text-sm md:text-lg absolute overflow-hidden"
+        class="text-red_2 self-end ml-6 md:ml-4 left-20 bottom-0 md:bottom-20 w-[200px] md:w-[190px] text-sm md:text-lg absolute overflow-hidden"
       >
         <div class="hafez-sonnet-ref">
           <div>Ḥāfeẓ-e Shīrāzī</div>
@@ -94,7 +94,7 @@
 
     <section
       ref="preferencesSec"
-      class="w-[90vw] md:w-[95vw] min-h-[100vh] rounded-2xl mx-auto mt-[5vw] py-16 flex flex-col md:flex-row items-center md:overflow-hidden"
+      class="w-[90vw] md:w-[95vw] md:min-h-[100vh] rounded-2xl mx-auto mt-[5vw] py-16 flex flex-col md:flex-row items-center md:overflow-hidden"
     >
       <div class="h-[30vh] md:h-full flex items-center flex-1 w-full md:w-2/5">
         <div class="preferences relative">
@@ -106,7 +106,7 @@
       </div>
 
       <div
-        class="h-[100vh] md:h-full w-full md:w-3/5 flex flex-col pl-0 md:pl-[2vw] mt-36 md:mt-0"
+        class="min-h-[100vh] md:h-full w-full md:w-3/5 flex flex-col pl-0 md:pl-[2vw] mt-36 md:mt-0"
       >
         <div class="flex items-center">
           <div class="section-heading text-red text-center md:text-left pl-2">
@@ -157,7 +157,7 @@
       </div>
     </section>
 
-    <section class="flex flex-col pb-[10vh] sm:p-[5vh] mt-[5vh]">
+    <section class="flex flex-col pb-[10vh] sm:p-[5vh] mt-[2vh]">
       <bballSection />
     </section>
   </div>
