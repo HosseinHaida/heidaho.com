@@ -68,13 +68,38 @@
       </div>
     </div>
 
-    <div class="max-w-sm absolute bottom-0 right-0 hidden md:block">
-      <div class="w-full h-[4px] border-paper_lt border-t-4 contact-border" />
-      <img
-        :src="meContact"
-        alt="Laughing picture of me"
-        class="max-w-xs contact-img"
-      />
+    <div class="max-w-sm absolute bottom-0 right-0 hidden lg:block">
+      <div class="w-full h-[4px] border-paper_lt border-t-4" />
+      <div
+        class="w-full h-full bg-gradient-to-r from-paper_lt/50 to-paper_lt/0 invisible contact-img-flashlight-bg"
+      >
+        <img
+          :src="meContact"
+          alt="Laughing picture of me"
+          class="max-w-xs h-[20rem]"
+        />
+      </div>
+
+      <div class="absolute left-[-49rem] top-[38%]">
+        <div class="flashlight">
+          <div class="flashlight-head">
+            <div class="flashlight-light invisible" />
+          </div>
+          <div class="flashlight-body">
+            <div class="flashlight-attachment" />
+            <div class="flashlight-switch-wrapper">
+              <label class="flashlight-switch">
+                <input
+                  v-model="flashlightState"
+                  @change="toggleFlashlight"
+                  type="checkbox"
+                />
+                <span class="flashlight-slider" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -85,6 +110,30 @@ import gsap from "gsap"
 
 const contactPageWrapr = ref<HTMLElement>()
 let ctx: ReturnType<typeof gsap.context>
+
+const flashlightState = ref(false)
+
+const toggleFlashlight = () => {
+  flashlightState.value ? onFlashlightOn() : onFlashlightOff()
+}
+
+const onFlashlightOn = () => {
+  let tl = gsap.timeline()
+  tl.to(".flashlight", { yPercent: 0, rotate: 0 })
+  tl.to([".flashlight-light", ".contact-img-flashlight-bg"], {
+    autoAlpha: 1,
+    duration: 0.3,
+  })
+}
+
+const onFlashlightOff = () => {
+  let tl = gsap.timeline()
+  tl.to([".flashlight-light", ".contact-img-flashlight-bg"], {
+    autoAlpha: 0,
+    duration: 0.3,
+  })
+  tl.to(".flashlight", { yPercent: 150, rotate: -5 })
+}
 
 onBeforeMount(() => {
   useBackground("dark")
@@ -103,10 +152,9 @@ useHead({
 onMounted(() => {
   ctx = gsap.context(() => {
     const tl = gsap.timeline()
+    tl.set(".flashlight", { yPercent: 150, rotate: -5 })
     tl.from(".contact-title", { x: -100, width: 0 })
     tl.from(".contact-details", { y: 150 })
-    tl.from(".contact-border", { xPercent: 100 })
-    tl.from(".contact-img", { autoAlpha: 0 }, ">-0.2")
   }, contactPageWrapr.value)
 })
 
@@ -128,5 +176,51 @@ onUnmounted(() => {
 .contact-link:hover::before {
   transform-origin: left;
   transform: scaleX(1);
+}
+
+.flashlight {
+  @apply w-80 h-20 flex flex-row-reverse items-center;
+}
+.flashlight-head {
+  @apply bg-paper_lt w-[25%] rounded-tl-full rounded-bl-full h-full relative;
+}
+.flashlight-attachment {
+  @apply w-[1rem] h-full rounded-sm bg-black;
+}
+.flashlight-light {
+  @apply border-r-paper_lt/50 border-t-transparent border-b-transparent border-t-[10rem] border-b-[10rem] border-r-[34rem] w-1 h-1 absolute top-[50%] left-0 translate-y-[-50%];
+}
+.flashlight-body {
+  @apply bg-paper_lt w-[75%] h-[50%] rounded-full flex flex-row-reverse;
+}
+
+.flashlight-switch-wrapper {
+  @apply w-full h-full flex items-center justify-end px-2 relative;
+}
+.flashlight-switch {
+  @apply relative inline-block w-16 h-8;
+}
+.flashlight-switch input {
+  @apply opacity-0 w-0 h-0;
+}
+.flashlight-slider {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  @apply bg-black absolute cursor-pointer top-0 left-0 right-0 bottom-0  flex items-center justify-start px-1 ease-in-out rounded-full;
+}
+.flashlight-slider:before {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  @apply bg-paper_lt content-[''] h-6 w-6 left-0 bottom-0 ease-in-out rounded-full;
+}
+input:checked + .flashlight-slider {
+  @apply bg-red;
+}
+input:focus + .flashlight-slider {
+  @apply shadow-xl;
+}
+
+input:checked + .flashlight-slider:before {
+  @apply translate-x-8;
 }
 </style>
