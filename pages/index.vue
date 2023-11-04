@@ -203,8 +203,8 @@
     </section>
 
     <section
-      v-if="!careerLocked"
-      class="bg-paper_lt w-[90vw] sm:w-[95vw] mt-6 rounded-2xl mx-auto relative"
+      :class="careerLocked ? 'invisible max-h-0 overflow-hidden' : 'mt-6'"
+      class="bg-paper_lt w-[90vw] sm:w-[95vw] rounded-2xl mx-auto relative"
     >
       <div class="py-20 px-6 sm:px-28">
         <div class="container-fluid">
@@ -260,15 +260,22 @@
       </div>
     </section>
 
-    <section v-if="!careerLocked" class="pt-28 pb-10 px-6 flex justify-center">
+    <section
+      :class="
+        careerLocked ? 'invisible max-h-0 overflow-hidden' : 'pt-28 pb-10 px-6'
+      "
+      class="flex justify-center"
+    >
       <div class="text-red section-heading">
         <div>PREVIOUS ROLES</div>
       </div>
     </section>
 
     <section
-      v-if="!careerLocked"
-      class="h-max flex justify-center mx-auto mt-10 mb-28"
+      :class="
+        careerLocked ? 'invisible max-h-0 overflow-hidden' : 'mt-10 md:mb-20'
+      "
+      class="h-max flex justify-center mx-auto"
     >
       <experienceSection />
     </section>
