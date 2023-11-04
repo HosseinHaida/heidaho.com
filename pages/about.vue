@@ -61,9 +61,8 @@
           </div>
 
           <div class="text-red_d text-head">
-            My name is Hossein. I'm a passionate Frontend Web Developer from
-            Iran. I exercise daily and enjoy pausing for a moment of
-            realization.
+            I'm Hossein, a passionate Frontend Web Developer from Iran. I
+            exercise daily and enjoy pausing for a moment of realization.
           </div>
 
           <div
