@@ -13,6 +13,8 @@
               autoplay
               loop
               muted
+              webkit-playsinline
+              playsinline
               class="rounded-2xl md:h-[70vh]"
               ref="dlabelVid"
             >
