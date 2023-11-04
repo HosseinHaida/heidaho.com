@@ -207,9 +207,9 @@
       <div class="py-20 px-6 sm:px-28">
         <div class="container-fluid">
           <div
-            class="absolute top-2 left-4 float-left mt-[-1rem] xl:mt-0 flex gap-1 items-center w-full justify-center md:justify-start"
+            class="absolute top-2 left-4 flex gap-1 items-center w-full justify-center md:justify-start"
           >
-            <div class="w-2 h-2 rounded-md bg-red_d" />
+            <div class="w-2 h-2 rounded-sm bg-red_d" />
             <div class="w-4 h-4 rounded-md bg-red_d" />
             <div class="w-6 h-6 rounded-lg bg-red_d" />
             <span
@@ -219,7 +219,7 @@
             </span>
             <div class="w-6 h-6 rounded-lg bg-red_d" />
             <div class="w-4 h-4 rounded-md bg-red_d" />
-            <div class="w-2 h-2 rounded-md bg-red_d" />
+            <div class="w-2 h-2 rounded-sm bg-red_d" />
           </div>
 
           <div class="text-red_d text-head">
