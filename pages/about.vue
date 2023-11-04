@@ -20,7 +20,7 @@
       </div>
 
       <div
-        class="text-red_2 self-end ml-6 md:ml-4 left-20 bottom-0 md:bottom-20 w-[200px] md:w-[190px] text-sm md:text-lg absolute overflow-hidden"
+        class="text-red_2 self-end ml-6 md:ml-4 left-2 md:left-20 bottom-[-4rem] md:bottom-20 w-[200px] md:w-[190px] text-sm md:text-lg absolute overflow-hidden"
       >
         <div class="hafez-sonnet-ref">
           <div>Ḥāfeẓ-e Shīrāzī</div>
