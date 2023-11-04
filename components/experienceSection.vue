@@ -125,7 +125,7 @@
             ref="netaaDesc"
           >
             <div
-              class="bg-paper_lt rounded-2xl p-4 flex flex-col justify-between md:h-[58vh]"
+              class="bg-paper_lt rounded-2xl p-4 flex flex-col justify-between md:h-[59vh]"
             >
               <NuxtLink to="https://netaa.ir/">
                 <img :src="netaaLogo" class="w-32" alt="netaa Logo" />

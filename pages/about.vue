@@ -46,18 +46,24 @@
     </section>
 
     <section
-      class="bg-paper_lt w-[90vw] md:w-[95vw] rounded-2xl mx-auto mt-[10vh] mb-28 md:mb-0"
+      class="bg-paper_lt w-[90vw] md:w-[95vw] rounded-2xl mx-auto mt-[10vh] mb-28 md:mb-0 relative"
     >
-      <div class="py-16 px-6 md:px-28">
+      <div class="py-20 px-6 md:px-28">
         <div class="container-fluid">
           <div
-            class="bg-red_d rounded-full float-left mt-[-1rem] xl:mt-0 px-6 md:px-16 py-1 mr-3 md:mr-6"
+            class="absolute top-2 left-4 float-left mt-[-1rem] xl:mt-0 flex gap-1 items-center"
           >
+            <div class="w-2 h-2 rounded-md bg-red_d" />
+            <div class="w-4 h-4 rounded-md bg-red_d" />
+            <div class="w-6 h-6 rounded-lg bg-red_d" />
             <span
-              class="text-paper_lt text-xs md:text-sm md:text-md lg:text-lg"
+              class="bg-red_d text-paper_lt rounded-2xl text-xs md:text-sm md:text-md lg:text-lg px-6 md:px-16 py-1"
             >
               ABOUT ME
             </span>
+            <div class="w-6 h-6 rounded-lg bg-red_d" />
+            <div class="w-4 h-4 rounded-md bg-red_d" />
+            <div class="w-2 h-2 rounded-md bg-red_d" />
           </div>
 
           <div class="text-red_d text-head">
