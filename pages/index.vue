@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid pb-4" ref="homePageWrapr">
+  <div class="bg-paper container-fluid pb-4 rounded-2xl" ref="homePageWrapr">
     <section class="pb-[5vh] relative">
       <div
         class="absolute bg-red z-30 w-full h-[100vh] title-overlay rounded-2xl flex items-center justify-center overflow-hidden"
@@ -27,7 +27,7 @@
       <div class="overflow-hidden">
         <div
           ref="enthusiastWrapr"
-          class="text-red_d text-center mb-8 mt-8 sm:mt-0"
+          class="text-red_d sm:text-center mb-2 sm:mb-8 mt-8 sm:mt-0 pl-4 sm:pl-0"
         >
           <span
             class="font-extralight leading-none xl:leading-[10rem] text-[9vw] xl:text-[11vw]"
@@ -304,7 +304,7 @@ const careerLocked = ref(true)
 // anims
 const yTween = (target: HTMLElement) => {
   return {
-    y: 250,
+    y: 320,
     ease: "power3.out",
     duration: 2,
     onComplete: (target: HTMLElement) => {

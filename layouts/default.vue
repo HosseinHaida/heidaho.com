@@ -1,12 +1,9 @@
 <template>
   <div class="bg-red_d w-full min-h-screen p-4">
     <div class="bg-red_d w-full fixed left-0 top-0 z-40 h-4" />
-    <div
-      class="rounded-2xl fixed-w z-10 h-full"
-      :class="bgColor === 'dark' ? 'bg-red_d' : 'bg-paper'"
-    >
+    <div class="rounded-2xl h-full fixed-w z-10">
       <div
-        class="fixed w-full h-full rounded-2xl fixed-w z-40"
+        class="fixed rounded-2xl w-full h-full fixed-w z-40"
         :class="showMenu ? 'overlay-to-black' : 'overlay-to-transparent'"
       />
 
@@ -28,7 +25,6 @@
 </template>
 
 <script lang="ts" setup>
-const { bgColor } = useBackground()
 const showMenu = ref(false)
 </script>
 

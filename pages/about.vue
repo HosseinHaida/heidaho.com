@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid" ref="aboutPageCon">
+  <div class="bg-paper container-fluid rounded-2xl" ref="aboutPageCon">
     <section
       ref="hafezSec"
       class="flex flex-col items-center justify-center h-[100vh] pb-12 md:pb-0"
