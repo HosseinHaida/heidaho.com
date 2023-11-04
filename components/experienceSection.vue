@@ -26,7 +26,7 @@
             ref="danaxaDesc"
           >
             <div
-              class="bg-paper_lt rounded-2xl p-4 flex flex-col justify-between md:h-[70vh]"
+              class="bg-paper_lt rounded-2xl p-4 flex flex-col justify-between md:h-[70vh] pr-4"
             >
               <NuxtLink to="https://danaxa.com">
                 <img :src="danaXaLogo" class="w-24" alt="danaXa Logo" />
@@ -38,7 +38,7 @@
                   Aug 2020 - Jul 2023 | Canberra, Australia
                 </div>
 
-                <div class="flex gap-1 mt-4">
+                <div class="flex flex-wrap gap-1 mt-4">
                   <div class="tech-chip">JavaScript</div>
                   <div class="tech-chip">Vue.js</div>
                   <div class="tech-chip">Kanva.js</div>
@@ -113,13 +113,13 @@
         >
           <div class="flex flex-col z-0">
             <img
-              class="rounded-2xl bg-white p-2 w-full md:w-auto h-auto md:h-[59vh]"
+              class="bg-paper_lt rounded-2xl p-2 w-full md:w-auto h-auto md:h-[59vh]"
               :src="netaaCollage"
             />
           </div>
 
           <div
-            class="bg-paper rounded-2xl w-full md:w-96 h-max flex flex-col gap-4 z-10"
+            class="bg-paper rounded-2xl w-full md:w-96 h-max flex flex-col gap-4 z-10 pr-4"
             ref="netaaDesc"
           >
             <div
