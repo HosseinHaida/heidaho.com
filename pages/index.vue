@@ -153,7 +153,9 @@
       </div>
     </section>
 
-    <section class="flex flex-col pb-[10vh] sm:pb-[5vh] relative career-sec">
+    <section
+      class="flex flex-col pb-[10vh] sm:pb-[5vh] relative overflow-hidden career-sec"
+    >
       <div
         class="w-full h-full absolute z-20 flex flex-col items-center gap-[2px]"
       >

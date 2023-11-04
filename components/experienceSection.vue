@@ -28,7 +28,7 @@
             ref="danaxaDesc"
           >
             <div
-              class="bg-paper_lt rounded-2xl p-4 flex flex-col justify-between md:h-[70vh] pr-4"
+              class="bg-paper_lt rounded-2xl p-4 flex flex-col justify-between md:h-[70vh]"
             >
               <NuxtLink to="https://danaxa.com">
                 <img :src="danaXaLogo" class="w-24" alt="danaXa Logo" />
@@ -121,7 +121,7 @@
           </div>
 
           <div
-            class="bg-paper rounded-2xl w-full md:w-96 h-max flex flex-col gap-4 z-10 pr-4"
+            class="bg-paper rounded-2xl w-full md:w-96 h-max flex flex-col gap-4 z-10"
             ref="netaaDesc"
           >
             <div
