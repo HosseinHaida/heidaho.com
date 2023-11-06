@@ -4,7 +4,7 @@
       <div
         class="absolute bg-red z-30 w-full h-[100vh] title-overlay rounded-2xl flex items-center justify-center overflow-hidden"
       >
-        <div class="text-white absolute top-4 left-6 opacity-80">
+        <div class="text-white absolute top-4 left-6 opacity-80 loading-init">
           Loading
           <Icon name="svg-spinners:pulse-rings-multiple" class="text-3xl" />
         </div>
@@ -336,6 +336,7 @@ onMounted(() => {
 
     // 1st section tween TL
     let titleTL = gsap.timeline()
+    titleTL.to(".loading-init", { autoAlpha: 0 })
     titleTL.to(".welcome-text", { autoAlpha: 1, duration: 0.5 })
     titleTL.to(".welcome-text", { height: 0, duration: 0.7 })
     titleTL.fromTo(
