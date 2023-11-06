@@ -162,7 +162,9 @@
       </div>
     </section>
 
-    <section class="flex flex-col pb-[10vh] sm:p-[5vh] mt-[2vh]">
+    <section
+      class="flex flex-col pb-[10vh] sm:p-[5vh] mt-[2vh] relative overflow-hidden"
+    >
       <bballSection />
     </section>
   </div>

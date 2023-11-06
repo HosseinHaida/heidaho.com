@@ -4,10 +4,11 @@
       <div
         class="absolute bg-red z-30 w-full h-[100vh] title-overlay rounded-2xl flex items-center justify-center overflow-hidden"
       >
-        <Icon
-          name="svg-spinners:pulse-rings-multiple"
-          class="text-3xl text-white absolute top-4 left-4 opacity-80"
-        />
+        <div class="text-white absolute top-4 left-6 opacity-80">
+          Loading
+          <Icon name="svg-spinners:pulse-rings-multiple" class="text-3xl" />
+        </div>
+
         <div
           class="text-paper_lt font-[BigShoulders] font-black text-head welcome-text overflow-hidden invisible"
         >
