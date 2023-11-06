@@ -144,11 +144,7 @@
           </div>
 
           <div class="flex justify-center mt-10">
-            <nuxtBtn
-              to="/about"
-              btn-id="moreaboutme"
-              model-value="MORE ABOUT ME"
-            />
+            <nuxtBtn to="/about" btn-id="moreaboutme" label="MORE ABOUT ME" />
           </div>
         </div>
       </div>

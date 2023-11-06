@@ -96,16 +96,13 @@ defineEmits(["showMenu"])
 }
 .fixed-corner-left::before,
 .fixed-corner-right::before {
-  content: " ";
-  @apply bg-red_d border-paper block w-[1rem] h-full border-b;
+  @apply bg-red_d border-paper block w-[1rem] h-full border-b content-[''];
 }
 .fixed-corner-left::after {
-  content: " ";
-  @apply bg-paper border-paper border-t-4 border-l-[10px] border-solid rounded-tl-2xl w-[1rem] h-full block absolute top-0 z-0;
+  @apply bg-paper border-paper border-t-4 border-l-[10px] border-solid rounded-tl-2xl w-[1rem] h-full block absolute top-0 z-0 content-[''];
 }
 
 .fixed-corner-right::after {
-  content: " ";
-  @apply bg-paper border-paper border-t-4 border-r-[10px] border-solid rounded-tr-2xl w-[1rem] h-full block absolute top-0 z-0;
+  @apply bg-paper border-paper border-t-4 border-r-[10px] border-solid rounded-tr-2xl w-[1rem] h-full block absolute top-0 z-0 content-[''];
 }
 </style>

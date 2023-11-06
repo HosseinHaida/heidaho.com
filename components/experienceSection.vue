@@ -51,55 +51,11 @@
                   <nuxtBtn
                     to="https://dlabel.org/annotation/tool"
                     btn-id="dlabelbtn"
-                    model-value="GO TO APP"
+                    label="GO TO APP"
                   />
                 </div>
               </div>
             </div>
-            <!-- <div
-              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
-            >
-              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
-              <div class="pr-4">
-                Development of multiple AI-powered computer vision tools,
-                including an image/video annotation engine.
-              </div>
-            </div>
-            <div
-              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
-            >
-              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
-              <div class="pr-4">
-                Design and implementation of the tools mainly using Vue.js,
-                Konva.js and GSAP for animations.
-              </div>
-            </div>
-            <div
-              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
-            >
-              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
-              <div class="pr-4">
-                Application performance improvements in topics such as
-                filtering, list virtualizations, drag-and-drop,...
-              </div>
-            </div>
-            <div
-              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
-            >
-              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
-              <div class="pr-4">
-                Building landing pages and a blog using Nuxt.js and SASS.
-              </div>
-            </div>
-            <div
-              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
-            >
-              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
-              <div class="pr-4">
-                Using web sockets between frontend and Flask backend for
-                real-time messaging and QA system.
-              </div>
-            </div> -->
           </div>
         </div>
       </div>
@@ -150,41 +106,11 @@
                   <nuxtBtn
                     to="https://samanesalamat.com/en"
                     btn-id="netaabtn"
-                    model-value="GO TO APP"
+                    label="GO TO APP"
                   />
                 </div>
               </div>
             </div>
-            <!-- <div
-              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
-            >
-              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
-              <div class="pr-4">
-                Development of a comprehensive “Occupational Safety and Health”
-                SaaS Vue.js web app.
-              </div>
-            </div>
-            <div
-              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
-            >
-              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
-              <div class="pr-4">
-                Implementation of an HR-Automation system web app using Node.js
-                and Vue.js (Quasar Framework) and MSSQL Server.
-              </div>
-            </div>
-            <div
-              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
-            >
-              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
-              <div class="pr-4">Design and creation of landing pages.</div>
-            </div>
-            <div
-              class="text-red_d bg-paper_lt pb-12 pt-6 pl-6 pr-4 rounded-2xl text-body"
-            >
-              <div class="text-red w-full flex justify-end pb-6"><li></li></div>
-              <div class="pr-4">Refactoring old and legacy codebase.</div>
-            </div> -->
           </div>
         </div>
       </div>
@@ -193,71 +119,10 @@
 </template>
 
 <script lang="ts" setup>
-import gsap from "gsap"
 import dlabelVidMP4 from "~/assets/dlabel-vid.mp4"
 import danaXaLogo from "~/assets/danaxa.png"
-
 import netaaCollage from "~/assets/healthyline-collage.jpg"
 import netaaLogo from "~/assets/netaa.png"
-
-const dlabelVid = ref<HTMLVideoElement>()
-
-// let ctx: ReturnType<typeof gsap.context>
-
-// const rootContainer = ref<HTMLElement>()
-// const danaxaDescSec = ref<HTMLElement>()
-// const danaxaDesc = ref<HTMLElement>()
-// const netaaDescSec = ref<HTMLElement>()
-// const netaaDesc = ref<HTMLElement>()
-
-// const positionDescTW = (scrollAmount: number, trigger: HTMLElement) => {
-//   return {
-//     y: scrollAmount,
-//     duration: 1,
-//     ease: "none",
-//     scrollTrigger: {
-//       trigger,
-//       start: "top",
-//       end: `+=${scrollAmount * -1}`,
-//       pin: true,
-//       scrub: 1,
-//       immediateRender: false,
-//     },
-//   }
-// }
-
-onMounted(() => {
-  // ctx = gsap.context(() => {
-  //   danaxaDescSec.value = danaxaDescSec.value as HTMLElement
-  //   danaxaDesc.value = danaxaDesc.value as HTMLElement
-  //   netaaDescSec.value = netaaDescSec.value as HTMLElement
-  //   netaaDesc.value = netaaDesc.value as HTMLElement
-  //   // danaXa desc tween
-  //   let danaxaDescScrollSize = -(
-  //     danaxaDesc.value?.scrollHeight +
-  //     0.3 * window.innerHeight -
-  //     window.innerHeight
-  //   )
-  //   gsap.to(
-  //     danaxaDesc.value,
-  //     positionDescTW(danaxaDescScrollSize, danaxaDescSec.value)
-  //   )
-  //   // netaa desc tween
-  //   let netaaDescScrollSize = -(
-  //     netaaDesc.value?.scrollHeight +
-  //     0.5 * window.innerHeight -
-  //     window.innerHeight
-  //   )
-  //   gsap.to(
-  //     netaaDesc.value,
-  //     positionDescTW(netaaDescScrollSize, netaaDescSec.value)
-  //   )
-  // }, rootContainer.value) // <- Scope!
-})
-
-onUnmounted(() => {
-  // ctx.revert()
-})
 </script>
 
 <style scoped>

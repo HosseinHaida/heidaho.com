@@ -166,16 +166,10 @@ onUnmounted(() => {
 
 <style scoped>
 .contact-link::before {
-  content: "";
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 0.2s ease-in-out;
-  @apply bg-paper_lt absolute w-[100%] h-[2px] bottom-0 left-0;
+  @apply bg-paper_lt absolute w-[100%] h-[2px] bottom-0 left-0 content-[''] scale-x-0 origin-right transition-transform;
 }
-
 .contact-link:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
+  @apply origin-left scale-x-100;
 }
 
 .flashlight {
@@ -204,14 +198,10 @@ onUnmounted(() => {
   @apply opacity-0 w-0 h-0;
 }
 .flashlight-slider {
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  @apply bg-black absolute cursor-pointer top-0 left-0 right-0 bottom-0  flex items-center justify-start px-1 ease-in-out rounded-full;
+  @apply bg-black absolute cursor-pointer top-0 left-0 right-0 bottom-0  flex items-center justify-start px-1 ease-in-out rounded-full duration-300;
 }
 .flashlight-slider:before {
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  @apply bg-paper_lt content-[''] h-6 w-6 left-0 bottom-0 ease-in-out rounded-full;
+  @apply bg-paper_lt content-[''] h-6 w-6 left-0 bottom-0 ease-in-out rounded-full duration-300;
 }
 input:checked + .flashlight-slider {
   @apply bg-red;

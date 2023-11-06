@@ -112,24 +112,6 @@
   font-style: italic;
 }
 
-@keyframes fadeToRedSecondary {
-  from {
-    @apply text-red_d;
-  }
-  to {
-    @apply text-red_2;
-  }
-}
-
-@keyframes fadeToRedDark {
-  from {
-    @apply text-red_2;
-  }
-  to {
-    @apply text-red_d;
-  }
-}
-
 body {
   @apply bg-red_d overflow-x-hidden overscroll-none;
 }

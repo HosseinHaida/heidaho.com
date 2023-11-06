@@ -1,7 +1,10 @@
 <template>
   <div class="w-full h-full z-50">
     <div class="flex h-full lg:ml-[8vw] menu-container">
-      <div ref="mainSecMenu" class="bg-paper flex-1 main-section-menu">
+      <div
+        ref="mainSecMenu"
+        class="bg-paper flex-1 translate-x-[200%] mr-[-1rem] main-section-menu"
+      >
         <div class="border-b-grey flex w-full border-b border-solid px-4 py-2">
           <button
             ref="menuBtn"
@@ -34,7 +37,7 @@
         </div>
       </div>
       <div
-        class="bg-red_d flex-1 max-w-sm pt-4 pb-16 pl-4 pr-8 hidden sm:block secondary-section-menu"
+        class="bg-red_d flex-1 max-w-sm pt-4 pb-16 pl-4 pr-8 hidden sm:block translate-x-[100%] secondary-section-menu"
         ref="secondarySeMenu"
       >
         <div class="flex flex-col gap-4 h-full">
@@ -255,14 +258,9 @@ watch(
 </script>
 
 <style scoped>
-.main-section-menu {
-  margin-right: -20px;
-  transform: translate(200%);
+.router-link-active {
+  @apply text-red !important;
 }
-.secondary-section-menu {
-  transform: translate(100%);
-}
-
 .main-section-menu,
 .secondary-section-menu,
 .menu-container {
@@ -283,11 +281,26 @@ watch(
   animation: fadeToRedSecondary 0.4s;
   animation-fill-mode: forwards;
 }
-.router-link-active {
-  @apply text-red !important;
-}
 .menu-link-number {
   @apply border-grey text-red_2 border font-[BigShoulders] rounded-full h-max px-2 py-1 text-xs;
+}
+
+@keyframes fadeToRedSecondary {
+  from {
+    @apply text-red_d;
+  }
+  to {
+    @apply text-red_2;
+  }
+}
+
+@keyframes fadeToRedDark {
+  from {
+    @apply text-red_2;
+  }
+  to {
+    @apply text-red_d;
+  }
 }
 
 .box {

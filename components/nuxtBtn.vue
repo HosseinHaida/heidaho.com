@@ -6,7 +6,7 @@
       :id="btnId + '_link'"
     >
       <span class="text-lg mr-2 z-10 pointer-events-none">
-        {{ modelValue }}
+        {{ label }}
       </span>
       <Icon
         :id="btnId + '_icon'"
@@ -16,7 +16,7 @@
       />
       <div
         :id="btnId + '_entity'"
-        class="bg-red pointer-events-none z-0 absolute bottom-0 rounded-full nuxt-btn-entity"
+        class="bg-red pointer-events-none z-0 absolute bottom-0 rounded-full w-[360px] h-[360px] scale-0"
       />
     </NuxtLink>
   </div>
@@ -25,7 +25,7 @@
 <script lang="ts" setup>
 import gsap from "gsap"
 const props = defineProps({
-  modelValue: {
+  label: {
     type: String,
     default: "",
   },
@@ -38,7 +38,7 @@ const props = defineProps({
     required: true,
   },
 })
-const { modelValue, btnId } = props
+const { label, btnId } = props
 
 const mouse = useMouse()
 
@@ -88,11 +88,3 @@ const destructEntity = () => {
   })
 }
 </script>
-
-<style scoped>
-.nuxt-btn-entity {
-  scale: 0;
-  width: 360px;
-  height: 360px;
-}
-</style>
