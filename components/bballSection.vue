@@ -4,18 +4,20 @@
       <div
         class="text-red_2 self-end ml-6 sm:ml-4 mb-[-100px] sm:mb-80 left-20 w-[200px] sm:w-[250px] text-sm sm:text-lg absolute"
       >
-        BASKETBALL HAS TAUGHT ME QUITE LESSONS
-        <div class="font-bold">CREATIVITY & TEAMWORK</div>
-        ARE TWO OF THEM
+        <p>
+          BASKETBALL HAS TAUGHT ME QUITE LESSONS
+          <strong>CREATIVITY & TEAMWORK</strong>
+          ARE TWO OF THEM
+        </p>
       </div>
-      <div class="z-0 basket-txt" ref="basketText">BASKET</div>
+      <h2 class="z-0 basket-txt" ref="basketText">BASKET</h2>
       <img
         :src="bballPic"
         class="w-[55vw] sm:w-[25vw] left-20 z-10 pointer-events-none"
         alt="Balling picture of me"
         ref="bbalPic"
       />
-      <div class="self-end z-20 ball-txt" ref="ballText">BALL</div>
+      <h2 class="self-end z-20 ball-txt" ref="ballText">BALL</h2>
     </div>
   </div>
 </template>

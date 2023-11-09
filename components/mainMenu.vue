@@ -20,20 +20,20 @@
         </div>
 
         <div class="links-container overflow-y-auto w-full h-full pb-12">
-          <div class="menu-links p-4 grid">
+          <nav class="menu-links p-4 grid">
             <div class="flex">
-              <div class="menu-link-number">1</div>
+              <div class="menu-link-num">1</div>
               <NuxtLink class="menu-link" to="/">HOME</NuxtLink>
             </div>
             <div class="flex">
-              <div class="menu-link-number">2</div>
+              <div class="menu-link-num">2</div>
               <NuxtLink class="menu-link" to="/about">ABOUT</NuxtLink>
             </div>
             <div class="flex">
-              <div class="menu-link-number">3</div>
+              <div class="menu-link-num">3</div>
               <NuxtLink class="menu-link" to="/contact">CONTACT</NuxtLink>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
       <div
@@ -152,6 +152,15 @@ gsap.registerPlugin(MotionPathPlugin)
 const route = useRoute()
 const mainSecMenu = ref<HTMLElement>()
 const secondarySeMenu = ref<HTMLElement>()
+
+useHead({
+  meta: [
+    {
+      name: "description",
+      content: "navigation menu",
+    },
+  ],
+})
 
 const facts = ref()
 const factInterval = ref()
@@ -281,7 +290,7 @@ watch(
   animation: fadeToRedSecondary 0.4s;
   animation-fill-mode: forwards;
 }
-.menu-link-number {
+.menu-link-num {
   @apply border-grey text-red_2 border font-[BigShoulders] rounded-full h-max px-2 py-1 text-xs;
 }
 

@@ -20,8 +20,8 @@
           ref="titleWrapr"
           class="text-red w-full flex flex-col sm:flex-row justify-center sm:text-center pl-4 sm:pl-0 overflow-hidden title-container"
         >
-          <span>ITS</span>
-          <span class="pl-0 sm:pl-6">HOSSEIN</span>
+          <h1>ITS</h1>
+          <h1 class="pl-0 sm:pl-6">HOSSEIN</h1>
         </div>
       </div>
 
@@ -30,11 +30,11 @@
           ref="enthusiastWrapr"
           class="text-red_d sm:text-center mb-2 sm:mb-8 mt-8 sm:mt-0 pl-4 sm:pl-0"
         >
-          <span
+          <h2
             class="font-extralight leading-none xl:leading-[10rem] text-[9vw] xl:text-[11vw]"
           >
             The Enthusiast For
-          </span>
+          </h2>
         </div>
       </div>
 
@@ -45,34 +45,34 @@
         >
           <div class="flex flex-col items-center pb-4">
             <div class="text-red_d w-[170px]">
-              <div class="interests-heading">Lifestyle</div>
-              <div class="pt-2 text-body">Peace</div>
-              <div class="pt-2 text-body">Slow Living</div>
-              <div class="pt-2 text-body">Bohemianism</div>
+              <h4 class="interests-heading">Lifestyle</h4>
+              <p class="pt-2 text-body">Peace</p>
+              <p class="pt-2 text-body">Slow Living</p>
+              <p class="pt-2 text-body">Bohemianism</p>
             </div>
           </div>
           <div class="flex flex-col items-center pb-4">
             <div class="text-red_d w-[170px]">
-              <div class="interests-heading">Well-being</div>
-              <div class="pt-2 text-body">Health</div>
-              <div class="pt-2 text-body">Family</div>
-              <div class="pt-2 text-body">Sports</div>
+              <h4 class="interests-heading">Well-being</h4>
+              <p class="pt-2 text-body">Health</p>
+              <p class="pt-2 text-body">Family</p>
+              <p class="pt-2 text-body">Sports</p>
             </div>
           </div>
           <div class="flex flex-col items-center pb-4">
             <div class="text-red_d w-[170px]">
-              <div class="interests-heading">Digitalization</div>
-              <div class="pt-2 text-body">Tech</div>
-              <div class="pt-2 text-body">Web</div>
-              <div class="pt-2 text-body">Motion</div>
+              <h4 class="interests-heading">Digitalization</h4>
+              <p class="pt-2 text-body">Tech</p>
+              <p class="pt-2 text-body">Web</p>
+              <p class="pt-2 text-body">Motion</p>
             </div>
           </div>
           <div class="flex flex-col items-center pb-4">
             <div class="text-red_d w-[170px]">
-              <div class="interests-heading">...</div>
-              <div class="pt-2 text-body">Universe</div>
-              <div class="pt-2 text-body">Endlessness</div>
-              <div class="pt-2 text-body">Possibilities</div>
+              <h4 class="interests-heading">...</h4>
+              <p class="pt-2 text-body">Universe</p>
+              <p class="pt-2 text-body">Endlessness</p>
+              <p class="pt-2 text-body">Possibilities</p>
             </div>
           </div>
         </div>
@@ -87,15 +87,15 @@
           class="text-red_2 self-end ml-6 md:ml-4 bottom-[-6rem] md:bottom-0 md:left-20 w-[200px] sm:w-[190px] text-sm sm:text-lg absolute"
         >
           BEHIND THIS MASK THERE IS MORE THAN JUST FLESH.
-          <div class="mt-4">
+          <p class="mt-4">
             BTW. THE BEANIE AND THE COOL ICE BREAKER ARE MY MOM'S HANDMADE :)
-          </div>
+          </p>
         </div>
-        <div class="z-0 hidden md:block who-text">WHO</div>
+        <h2 class="z-0 hidden md:block who-text">WHO</h2>
         <div class="z-0 md:hidden flex flex-col ml-0 who-text">
-          <span>WHO</span>
-          <span>AM</span>
-          <span>I?</span>
+          <h2>WHO</h2>
+          <h2>AM</h2>
+          <h2>I?</h2>
         </div>
 
         <img
@@ -103,7 +103,7 @@
           class="w-[40vw] sm:w-[20vw] left-20 z-10 ml-10 sm:ml-0 pointer-events-none whoami-pic"
           alt="Anonymous picture of me"
         />
-        <div class="self-end z-20 hidden md:block ami-text">AM I?</div>
+        <h2 class="self-end z-20 hidden md:block ami-text">AM I?</h2>
       </div>
     </section>
 
@@ -127,21 +127,23 @@
         <div
           class="text-red flex flex-col justify-center items-center w-full pt-40 md:pt-[28] section-heading"
         >
-          <div>LIFE</div>
-          <div>UNCONDITIONAL</div>
+          <h2>A FORM OF LIFE</h2>
+          <h2>UNCONDITIONAL</h2>
         </div>
 
         <div
           class="text-red_d w-full sm:w-[50vw] text-center mt-10 text-body mx-auto"
         >
-          I love planets, specially Earth. It's breathing and giving us life.
-          Why not take a moment to appreciate and spend some quality time with
-          her.
+          <p>
+            I am son of the Sun. I live, just like a bird lives. There are
+            various forms of life. We are all parts of the Earth and we are
+            conscious.
+          </p>
 
-          <div class="mt-6">
+          <p class="mt-6">
             Stop, listen, realise, learn, improvise, participate and to create
             something beautiful is my hobby.
-          </div>
+          </p>
 
           <div class="flex justify-center mt-10">
             <nuxtBtn to="/about" btn-id="moreaboutme" label="MORE ABOUT ME" />
@@ -182,20 +184,18 @@
       <div
         class="flex flex-col md:flex-row items-start w-full justify-center py-16"
       >
-        <div class="z-0 hidden md:block mr-[-17vw] invisible car-text">CAR</div>
-        <div class="z-0 block md:hidden order-2 mx-auto invisible car-text">
+        <h2 class="z-0 hidden md:block mr-[-17vw] invisible car-text">CAR</h2>
+        <h2 class="z-0 block md:hidden order-2 mx-auto invisible car-text">
           CAREER
-        </div>
+        </h2>
         <img
           :src="careerIntroPicSrc"
           class="w-[60vw] sm:w-[40vw] left-20 z-0 pointer-events-none order-1 md:order-1 mb-[-6rem] mb-none invisible career-pic"
           alt="Official picture of me"
         />
-        <div
-          class="self-end z-10 hidden md:block md:order-3 invisible eer-text"
-        >
+        <h2 class="self-end z-10 hidden md:block md:order-3 invisible eer-text">
           EER
-        </div>
+        </h2>
       </div>
     </section>
 
@@ -211,22 +211,22 @@
             <div class="w-2 h-2 rounded-md bg-red_d" />
             <div class="w-4 h-4 rounded-md bg-red_d" />
             <div class="w-6 h-6 rounded-lg bg-red_d" />
-            <span
+            <h4
               class="bg-red_d text-paper_lt rounded-2xl text-xs md:text-sm md:text-md lg:text-lg px-6 md:px-16 py-1"
             >
               WHAT DO I DO?
-            </span>
+            </h4>
             <div class="w-6 h-6 rounded-lg bg-red_d" />
             <div class="w-4 h-4 rounded-md bg-red_d" />
             <div class="w-2 h-2 rounded-md bg-red_d" />
           </div>
 
-          <div class="text-red_d text-head">
+          <p class="text-red_d text-head">
             As a software engineering graduate and a few years of experience
             dedicated to coding and web development, I can admit I've seen
             enough and I'd say there is always more and that really intrigues
             me.
-          </div>
+          </p>
 
           <div
             class="text-red_d flex mt-6 md:mt-12 lg:mt-20 items-start columns-2 justify-between"
@@ -236,21 +236,21 @@
                 <span class="text-red_2 font-[BigShoulders] text-xl font-bold">
                 </span>
               </div>
-              <div class="text-[2vw]">Path</div>
+              <h5 class="text-[2vw]">Path</h5>
             </div>
             <div class="w-full md:w-[50vw] text-body mt-8 md:mt-0">
-              <div>
+              <p>
                 There is always a better and more creative way to solve things.
                 Developing is much like hard-coding the creativity that as a
                 thought would vanish in a glimpse.
-              </div>
+              </p>
 
-              <div class="mt-10">
+              <p class="mt-10">
                 I know for a fact that things might not get the approval they
                 deserve. I give elements the proper attention to maximise
                 impact. Everyone is going to use web at some point and I'd like
                 to make it as comfortable as I can.
-              </div>
+              </p>
             </div>
           </div>
         </div>
@@ -264,7 +264,7 @@
       class="flex justify-center"
     >
       <div class="text-red section-heading">
-        <div>PREVIOUS ROLES</div>
+        <h2>PREVIOUS ROLES</h2>
       </div>
     </section>
 
@@ -341,6 +341,7 @@ onMounted(() => {
       { height: 0, duration: 1 },
       ">-0.1"
     )
+    titleTL.set(".title-overlay", { display: "none" })
     titleTL.from(titleWrapr.value, yTween(titleWrapr.value), ">-0.6")
     titleTL.from(enthusiastWrapr.value, yTween(enthusiastWrapr.value), ">-1.7")
     titleTL.from(interestsWrapr.value, yTween(interestsWrapr.value), ">-1.5")
@@ -443,7 +444,7 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.title-container span {
+.title-container h1 {
   @apply block md:inline-block font-[BigShoulders] text-[25vw] sm:text-[21vw] leading-none font-black cursor-default;
 }
 
@@ -452,10 +453,10 @@ onUnmounted(() => {
 }
 
 .who-text,
-.who-text > span,
+.who-text > h2,
 .ami-text,
 .car-text,
-.car-text > span,
+.car-text > h2,
 .eer-text {
   @apply text-red font-[BigShoulders] text-[24vw] sm:text-[15.5vw] font-black leading-tight;
 }

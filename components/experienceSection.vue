@@ -73,6 +73,7 @@
             <img
               class="bg-paper_lt rounded-2xl p-2 w-full md:w-auto h-auto md:h-[59vh]"
               :src="netaaCollage"
+              alt="A collage of healthyline.com OSH app"
             />
           </div>
 

@@ -4,11 +4,11 @@
       class="text-paper_lt flex flex-col w-full px-6 lg:px-36 section-heading h-max"
     >
       <div class="border-paper_lt w-full h-full border-b-4 pb-10 contact-title">
-        <div>KEEP IN TOUCH</div>
-        <span class="mt-4 block text-lg">
+        <h2>KEEP IN TOUCH</h2>
+        <p class="mt-4 block text-lg">
           Feel free to reach me if you have a project, idea, suggestion or just
           to chat
-        </span>
+        </p>
       </div>
     </div>
 

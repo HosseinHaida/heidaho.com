@@ -23,9 +23,11 @@
         class="text-red_2 self-end ml-6 md:ml-4 left-2 md:left-20 bottom-[-4rem] md:bottom-20 w-[200px] md:w-[190px] text-sm md:text-lg absolute overflow-hidden"
       >
         <div class="hafez-sonnet-ref">
-          <div>Ḥāfeẓ-e Shīrāzī</div>
-          <div>SONNET NO. 80</div>
-          <div>14TH CENTURY</div>
+          <p>
+            Ḥāfeẓ-e Shīrāzī <br />
+            SONNET NO. 80 <br />
+            14TH CENTURY
+          </p>
         </div>
       </div>
 
@@ -33,14 +35,14 @@
         class="text-red mt-20 w-full md:w-[55vw] px-4 text-body overflow-hidden"
       >
         <div class="hafez-sonnet-tran h-full">
-          <div class="font-normal">This is how I'd put it in English:</div>
-          <div class="my-4 md:ml-20">
+          <h5 class="font-normal">This is how I'd put it in English:</h5>
+          <p class="my-4 md:ml-20">
             All seek that, either alert and perceptive or intoxicated and
             unconscious
-          </div>
-          <div class="md:ml-40">
+          </p>
+          <p class="md:ml-40">
             Everywhere is home to love, no matter Mosque or Synagogue (בית כנסת)
-          </div>
+          </p>
         </div>
       </div>
     </section>
@@ -56,20 +58,20 @@
             <div class="w-2 h-2 rounded-md bg-red_d" />
             <div class="w-4 h-4 rounded-md bg-red_d" />
             <div class="w-6 h-6 rounded-lg bg-red_d" />
-            <span
+            <h4
               class="bg-red_d text-paper_lt rounded-2xl text-xs md:text-sm md:text-md lg:text-lg px-6 md:px-16 py-1"
             >
               ABOUT ME
-            </span>
+            </h4>
             <div class="w-6 h-6 rounded-lg bg-red_d" />
             <div class="w-4 h-4 rounded-md bg-red_d" />
             <div class="w-2 h-2 rounded-md bg-red_d" />
           </div>
 
-          <div class="text-red_d text-head">
+          <p class="text-red_d text-head">
             I'm Hossein, a passionate Frontend Web Developer from Iran. I
             exercise daily and enjoy pausing for a moment of realization.
-          </div>
+          </p>
 
           <div
             class="text-red_d flex mt-6 md:mt-12 lg:mt-20 items-start columns-2 justify-between"
@@ -82,10 +84,12 @@
               <div class="text-[2vw]">Ideas</div>
             </div>
             <div class="w-full sm:w-[50vw] text-body">
-              There is no limit on how different of a thought you would have at
-              a moment, and yet you choose to hold on to it for about some time.
-              I love challenges. They let you think about something creatively
-              and learn something new.
+              <p>
+                There is no limit on how different of a thought you would have
+                at a moment, and yet you choose to hold on to it for about some
+                time. I love challenges. They let you think about something
+                creatively and learn something new.
+              </p>
 
               <p class="mt-10">
                 I appreciate aesthetics in any form. An unobtrusive detail with
@@ -115,48 +119,56 @@
       >
         <div class="flex items-center">
           <div class="section-heading text-red text-center md:text-left pl-2">
-            <div>PREFERENCES</div>
+            <h2>PREFERENCES</h2>
           </div>
 
-          <div class="ml-4 text-md text-red max-w-sm">THAT DRIVE ME</div>
+          <span class="ml-4 text-md text-red max-w-sm">THAT DRIVE ME</span>
         </div>
 
         <div class="mt-10 md:ml-16 preference-text">
           <span>01.</span>
           <div>
-            <div class="font-semibold mb-2">Health</div>
-            The energy to fulfill physical and mental satisfaction comes from
-            within. I work on my well-being on a daily basis. Books and sports
-            play an important of a role.
+            <h4 class="font-semibold mb-2">Health</h4>
+            <p>
+              The energy to fulfill physical and mental satisfaction comes from
+              within. I work on my well-being on a daily basis. Books and sports
+              play an important of a role.
+            </p>
           </div>
         </div>
 
         <div class="mt-4 md:ml-28 preference-text">
           <span>02.</span>
           <div>
-            <div class="font-semibold mb-2">Family</div>
-            The emotional ties are kept in the safest place. Family is a
-            begining for one to feel responsible. It's fuel to my desire to keep
-            trying, to feel good.
+            <h4 class="font-semibold mb-2">Family</h4>
+            <p>
+              The emotional ties are kept in the safest place. Family is a
+              begining for one to feel responsible. It's fuel to my desire to
+              keep trying, to feel good.
+            </p>
           </div>
         </div>
 
         <div class="mt-4 md:ml-24 preference-text">
           <span>03.</span>
           <div>
-            <div class="font-semibold mb-2">Career</div>
-            It gives me a sense of satisfaction and purpose doing what I do. I
-            enjoy overcoming obstacles and making an impact.
+            <h4 class="font-semibold mb-2">Career</h4>
+            <p>
+              It gives me a sense of satisfaction and purpose doing what I do. I
+              enjoy overcoming obstacles and making an impact.
+            </p>
           </div>
         </div>
 
         <div class="mt-4 md:ml-4 preference-text">
           <span>04.</span>
           <div>
-            <div class="font-semibold mb-2">Personal Growth</div>
-            I have been developing as a mankind for over 200 centuries. I know
-            I'm capable of who knows what and I'm always trying to find out
-            about things I could do better.
+            <h4 class="font-semibold mb-2">Personal Growth</h4>
+            <p>
+              I have been developing as a mankind for over 200 centuries. I know
+              I'm capable of who knows what and I'm always trying to find out
+              about things I could do better.
+            </p>
           </div>
         </div>
       </div>
