@@ -70,6 +70,13 @@
 
     <div class="max-w-sm absolute bottom-0 right-0 hidden lg:block">
       <div class="w-full h-[4px] border-paper_lt border-t-4" />
+      <div class="w-full h-full absolute contact-img-dark">
+        <img
+          :src="meContactDark"
+          alt="Laughing picture of me in the dark"
+          class="max-w-xs h-[20rem]"
+        />
+      </div>
       <div
         class="w-full h-full bg-gradient-to-r from-paper_lt/50 to-paper_lt/0 invisible contact-img-flashlight-bg"
       >
@@ -106,6 +113,7 @@
 
 <script lang="ts" setup>
 import meContact from "~/assets/me-contact.png"
+import meContactDark from "~/assets/me-contact-dark.png"
 import gsap from "gsap"
 
 const contactPageWrapr = ref<HTMLElement>()
@@ -120,10 +128,15 @@ const toggleFlashlight = () => {
 const onFlashlightOn = () => {
   let tl = gsap.timeline()
   tl.to(".flashlight", { yPercent: 0, rotate: 0 })
-  tl.to([".flashlight-light", ".contact-img-flashlight-bg"], {
-    autoAlpha: 1,
-    duration: 0.3,
-  })
+  tl.to(".contact-img-dark", { autoAlpha: 0, duration: 0.3 })
+  tl.to(
+    [".flashlight-light", ".contact-img-flashlight-bg"],
+    {
+      autoAlpha: 1,
+      duration: 0.3,
+    },
+    ">-0.3"
+  )
 }
 
 const onFlashlightOff = () => {
@@ -132,6 +145,7 @@ const onFlashlightOff = () => {
     autoAlpha: 0,
     duration: 0.3,
   })
+  tl.to(".contact-img-dark", { autoAlpha: 1, duration: 0.3 }, ">-0.3")
   tl.to(".flashlight", { yPercent: 150, rotate: -5 })
 }
 

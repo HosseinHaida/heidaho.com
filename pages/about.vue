@@ -8,14 +8,14 @@
         class="w-full flex flex-col items-center justify-center overflow-hidden"
       >
         <img
-          class="md:mr-[-15vw] max-w-3xl w-full hafez-sonnet-1st"
+          class="md:mr-[-15vw] max-w-4xl px-4 md:px-12 w-full hafez-sonnet-1st"
           :src="hafezImg1"
-          alt="Hafez Sonnet No. 80 1st"
+          alt="Hafez Sonnet No. 94 1st"
         />
         <img
-          class="md:ml-[-15vw] max-w-3xl w-full hafez-sonnet-2nd"
+          class="md:ml-[-10vw] max-w-4xl w-full mt-2 hafez-sonnet-2nd"
           :src="hafezImg2"
-          alt="Hafez Sonnet No. 80 2nd"
+          alt="Hafez Sonnet No. 94 2nd"
         />
       </div>
 
@@ -25,7 +25,7 @@
         <div class="hafez-sonnet-ref">
           <p>
             Ḥāfeẓ-e Shīrāzī <br />
-            SONNET NO. 80 <br />
+            SONNET NO. 94 <br />
             14TH CENTURY
           </p>
         </div>
@@ -35,13 +35,13 @@
         class="text-red mt-20 w-full md:w-[55vw] px-4 text-body overflow-hidden"
       >
         <div class="hafez-sonnet-tran h-full">
-          <h5 class="font-normal">This is how I'd put it in English:</h5>
+          <h5 class="font-normal">And the translation:</h5>
           <p class="my-4 md:ml-20">
-            All seek that, either alert and perceptive or intoxicated and
-            unconscious
+            How is it possible to consider an end to it all
           </p>
           <p class="md:ml-40">
-            Everywhere is home to love, no matter Mosque or Synagogue (בית כנסת)
+            When there are more than hundreds of thousands of possibilities for
+            it's beginning
           </p>
         </div>
       </div>
@@ -184,8 +184,8 @@
 
 <script lang="ts" setup>
 import gsap from "gsap"
-import hafezImg1 from "~/assets/hafez1.png"
-import hafezImg2 from "~/assets/hafez2.png"
+import hafezImg1 from "~/assets/hafez_sonnet-1.png"
+import hafezImg2 from "~/assets/hafez_sonnet-2.png"
 
 let ctx: ReturnType<typeof gsap.context>
 const aboutPageCon = ref<HTMLElement>()

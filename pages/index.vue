@@ -285,7 +285,7 @@ import MotionPathPlugin from "gsap/MotionPathPlugin"
 gsap.registerPlugin(MotionPathPlugin)
 
 import img1 from "~/assets/photos/IMG_1247.jpg"
-import img2 from "~/assets/photos/IMG_4585.jpeg"
+import img2 from "~/assets/photos/IMG_4585.jpg"
 import img3 from "~/assets/photos/IMG_6475.jpg"
 import img4 from "~/assets/photos/IMG_6494.jpg"
 import img5 from "~/assets/photos/IMG_7410.jpg"
