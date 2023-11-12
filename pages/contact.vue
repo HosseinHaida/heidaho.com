@@ -70,7 +70,7 @@
 
     <div class="max-w-sm absolute bottom-0 right-0 hidden lg:block">
       <div class="w-full h-[4px] border-paper_lt border-t-4" />
-      <div class="w-full h-full absolute contact-img-dark">
+      <div class="w-full h-full absolute hidden md:block contact-img-dark">
         <img
           :src="meContactDark"
           alt="Laughing picture of me in the dark"
