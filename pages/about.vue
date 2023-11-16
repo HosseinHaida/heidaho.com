@@ -1,5 +1,19 @@
 <template>
   <div class="bg-paper container-fluid rounded-2xl" ref="aboutPageCon">
+    <div
+      class="absolute bg-red z-30 w-full h-[100vh] title-overlay rounded-2xl flex items-center justify-center overflow-hidden"
+    >
+      <div class="text-white absolute top-4 left-6 opacity-80 loading-init">
+        Loading
+        <Icon name="svg-spinners:pulse-rings-multiple" class="text-3xl" />
+      </div>
+
+      <div
+        class="text-paper_lt font-[BigShoulders] font-black text-head welcome-text overflow-hidden invisible"
+      >
+        ABOUT ME
+      </div>
+    </div>
     <section
       ref="hafezSec"
       class="flex flex-col items-center justify-center h-[100vh] pb-12 md:pb-0"
@@ -221,10 +235,22 @@ onMounted(() => {
     preferencesSec.value = preferencesSec.value as HTMLElement
 
     let sonnetTL = gsap.timeline()
-    sonnetTL.from(".hafez-sonnet-1st", yTween(hafezSec.value))
+
+    sonnetTL.to(".loading-init", { autoAlpha: 0 })
+    sonnetTL.to(".welcome-text", { autoAlpha: 1, duration: 0.5 })
+    sonnetTL.to(".welcome-text", { height: 0, duration: 0.7 })
+    sonnetTL.fromTo(
+      ".title-overlay",
+      { height: "100vh" },
+      { height: 0, duration: 1 },
+      ">-0.1"
+    )
+    sonnetTL.set(".title-overlay", { display: "none" })
+
+    sonnetTL.from(".hafez-sonnet-1st", yTween(hafezSec.value), ">-0.8")
     sonnetTL.from(".hafez-sonnet-2nd", yTween(hafezSec.value), ">-1.7")
     sonnetTL.from(".hafez-sonnet-ref", yTween(hafezSec.value), ">-1.5")
-    sonnetTL.from(".hafez-sonnet-tran", yTween(hafezSec.value))
+    sonnetTL.from(".hafez-sonnet-tran", yTween(hafezSec.value), ">-0.5")
 
     let preferencesTL = gsap.timeline({
       scrollTrigger: { trigger: preferencesSec.value, start: "top 70%" },
