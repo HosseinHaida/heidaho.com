@@ -68,41 +68,50 @@
       </div>
     </div>
 
-    <div class="max-w-sm absolute bottom-0 right-0 hidden lg:block">
-      <div class="w-full h-[4px] border-paper_lt border-t-4" />
-      <div class="w-full h-full absolute contact-img-dark">
-        <img
-          :src="meContactDark"
-          alt="Laughing picture of me in the dark"
-          class="max-w-xs h-[20rem]"
+    <div
+      class="absolute bottom-0 right-0 hidden lg:block w-[100vw] h-[19rem] overflow-hidden"
+    >
+      <div class="w-full h-full flex justify-end relative">
+        <div
+          class="absolute top-0 right-0 w-[40vw] border-paper_lt border-t-4 h-1"
         />
-      </div>
-      <div
-        class="w-full h-full bg-gradient-to-r from-paper_lt/50 to-paper_lt/0 invisible contact-img-flashlight-bg"
-      >
-        <img
-          :src="meContact"
-          alt="Laughing picture of me"
-          class="max-w-xs h-[20rem]"
-        />
-      </div>
-
-      <div class="absolute left-[-49rem] top-[38%]">
-        <div class="flashlight">
-          <div class="flashlight-head">
-            <div class="flashlight-light invisible" />
+        <div class="w-sm h-full mt-1 order-2">
+          <div class="absolute contact-img-dark">
+            <img
+              :src="meContactDark"
+              alt="Laughing picture of me in the dark"
+              class="w-[24rem]"
+            />
           </div>
-          <div class="flashlight-body">
-            <div class="flashlight-attachment" />
-            <div class="flashlight-switch-wrapper">
-              <label class="flashlight-switch">
-                <input
-                  v-model="flashlightState"
-                  @change="toggleFlashlight"
-                  type="checkbox"
-                />
-                <span class="flashlight-slider" />
-              </label>
+          <div
+            class="bg-gradient-to-r from-paper_lt/50 to-paper_lt/0 invisible contact-img-flashlight-bg"
+          >
+            <img
+              :src="meContact"
+              alt="Laughing picture of me"
+              class="w-[24rem]"
+            />
+          </div>
+        </div>
+        <div class="w-full h-full order-1 relative">
+          <div class="absolute bottom-28 right-[29rem]">
+            <div class="flashlight">
+              <div class="flashlight-head">
+                <div class="flashlight-light invisible" />
+              </div>
+              <div class="flashlight-body">
+                <div class="flashlight-attachment" />
+                <div class="flashlight-switch-wrapper">
+                  <label class="flashlight-switch">
+                    <input
+                      v-model="flashlightState"
+                      @change="toggleFlashlight"
+                      type="checkbox"
+                    />
+                    <span class="flashlight-slider" />
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
         </div>
