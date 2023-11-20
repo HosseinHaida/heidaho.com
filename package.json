@@ -13,8 +13,7 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.1",
     "nuxt": "^3.8.0",
-    "nuxt-icon": "^0.5.0",
-    "vite-plugin-vsharp": "^1.5.4"
+    "nuxt-icon": "^0.5.0"
   },
   "dependencies": {
     "gsap": "^3.12.2",
