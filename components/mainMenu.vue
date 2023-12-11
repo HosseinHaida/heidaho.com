@@ -43,7 +43,7 @@
         <div class="flex flex-col gap-4 h-full">
           <div class="box w-full">
             <div class="box-heading">Availability</div>
-            <div class="box-body">End of November / 2023</div>
+            <div class="box-body">End of December / 2023</div>
           </div>
 
           <div class="box w-full">
