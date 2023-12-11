@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-paper container-fluid rounded-2xl" ref="aboutPageCon">
+  <div
+    class="bg-paper container-fluid rounded-2xl pb-[5vh] relative"
+    ref="aboutPageCon"
+  >
     <div
       class="absolute bg-red z-30 w-full h-[100vh] title-overlay rounded-2xl flex items-center justify-center overflow-hidden"
     >
