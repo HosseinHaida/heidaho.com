@@ -19,10 +19,10 @@
     </div>
     <section
       ref="hafezSec"
-      class="flex flex-col items-center justify-center h-[100vh] pb-12 md:pb-0"
+      class="flex flex-col items-center justify-center h-[100vh] pb-12 md:pb-0 relative"
     >
       <div
-        class="w-full flex flex-col items-center justify-center overflow-hidden"
+        class="w-full flex flex-col items-center justify-center overflow-hidden relative"
       >
         <img
           class="md:mr-[-15vw] max-w-4xl px-4 md:px-12 w-full hafez-sonnet-1st"
@@ -37,18 +37,6 @@
       </div>
 
       <div
-        class="text-red_2 self-end ml-6 md:ml-4 left-2 md:left-20 bottom-[-4rem] md:bottom-20 w-[200px] md:w-[190px] text-sm md:text-lg absolute overflow-hidden"
-      >
-        <div class="hafez-sonnet-ref">
-          <p>
-            Ḥāfeẓ-e Shīrāzī <br />
-            SONNET NO. 94 <br />
-            14TH CENTURY
-          </p>
-        </div>
-      </div>
-
-      <div
         class="text-red mt-20 w-full md:w-[55vw] px-4 text-body overflow-hidden"
       >
         <div class="hafez-sonnet-tran h-full">
@@ -59,6 +47,18 @@
           <p class="md:ml-40">
             When there are more than hundreds of thousands of possibilities for
             it's beginning
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="text-red_2 self-end ml-6 md:ml-4 left-2 md:left-20 bottom-[-4rem] md:bottom-20 w-[200px] md:w-[190px] text-sm md:text-lg absolute overflow-hidden"
+      >
+        <div class="hafez-sonnet-ref">
+          <p>
+            Ḥāfeẓ-e Shīrāzī <br />
+            SONNET NO. 94 <br />
+            14TH CENTURY
           </p>
         </div>
       </div>
