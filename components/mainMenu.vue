@@ -127,7 +127,7 @@
                   <div
                     v-for="(text, i) in facts"
                     :key="i"
-                    @click="nextFact(i)"
+                    @click="nextFact(Number(i))"
                     class="w-2 h-2 rounded-full bg-white cursor-pointer"
                     :class="
                       currentFact.index === i ? 'opacity-90' : 'opacity-20'
@@ -225,7 +225,7 @@ const nextFact = async (goToFact?: number) => {
       ease: "power2",
       onComplete: () => resetFactPos(),
     },
-    ">-0.2"
+    ">-0.2",
   )
 
   if (goToFact) {
@@ -262,7 +262,7 @@ watch(
   () => route.fullPath,
   () => {
     hideMenu()
-  }
+  },
 )
 </script>
 
